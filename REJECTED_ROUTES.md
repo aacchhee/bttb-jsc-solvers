@@ -7,7 +7,8 @@ separately because they remain useful even when a solver using them loses a
 finite timing comparison.
 
 The [solver guide](docs/SOLVERS.md) describes main interfaces. The
-[code guide](docs/CODE_GUIDE.md) locates every implementation component. Recorded
+[code guide](docs/CODE_GUIDE.md) explains the main parts, and the
+[file reference](docs/FILE_REFERENCE.md) locates individual components. Recorded
 values below are available in [the paper-value CSV](reproduce/reference/paper_numbers.csv);
 new runs produce their own measurements.
 
@@ -54,7 +55,7 @@ approximant, modular-vector and supplied-displacement-generator services used
 by the dedicated construction controls. They also expose lower-level algebra
 that can be reused independently. The prefix identifies the source construction,
 not a discarded solver number. Read [Khichane–Neiger 2026](REFERENCES.md#khichane-and-neiger-2026)
-and the [module-by-module explanation](docs/CODE_GUIDE.md#ck-and-kn-what-these-prefixes-mean).
+and the [explanation of these names](docs/CODE_GUIDE.md#ck-and-kn-what-these-prefixes-mean).
 The preprint version and its premises remain explicit; the package does not
 claim a blanket implementation of all its theorem-level algorithms.
 

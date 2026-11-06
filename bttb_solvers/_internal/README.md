@@ -1,8 +1,9 @@
 # Implementation navigation
 
-Start with [the code guide](../../docs/CODE_GUIDE.md), especially its setup/query
-entry table, representations and complete grouped module index. Every substantive
-module also begins with its role and responsibility.
+Start with [the code guide](../../docs/CODE_GUIDE.md) for the mathematical role
+of each part. The [complete file reference](../../docs/FILE_REFERENCE.md) locates
+individual files. Every substantive module also begins with its role and
+responsibility.
 
 - `cc_prepared.py` and `banded_bttb/`: CC/CC-R and their Toeplitz/symbol/correction primitives.
 - `extension_field.py`, `extension_kernels.py`: supplied-extension CC variants.

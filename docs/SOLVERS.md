@@ -1,215 +1,191 @@
 # Choosing and understanding a solver
 
-Start with a matrix class and the service you need. Here `n` is the block count
-and block order, so the physical system has order `N=n*n`. A banded input has
-outer half-bandwidth `k`. A half-strip input has `w` permitted block
-superdiagonals. **H0** means that its outermost block `A[-w]` is invertible.
+Each method solves a system Tx=b over an exact finite field. Here T has n
+block rows, with n-by-n Toeplitz blocks, so its order is N=n². A banded matrix
+has block half-bandwidth k; a half-strip has at most w block superdiagonals.
+The assumption **H0** means that the outermost block A[-w] is invertible.
 
-The public entry points live in [api.py](../bttb_solvers/api.py). The
-[code guide](CODE_GUIDE.md) maps their implementations and representations.
-Runnable [examples](../examples/README.md) show setup, reuse and exact checks.
+Most methods separate the work into **preparation**, depending only on T, and
+**solves**, depending on b. Think of the familiar separation between computing
+LU factors and using them for successive right-hand sides. The name “query”
+in the code means one of these subsequent solves.
 
-## Which part of the repository is useful for what?
+For input instructions and a first calculation, see the
+[practical guide](PRACTICAL.md). For the source files implementing these ideas,
+see the [code guide](CODE_GUIDE.md).
 
-| Purpose | Start here | How to interpret it |
-|---|---|---|
-| Solve a banded system and reuse preparation | CC, CC-R or BFM | Main solver interfaces. Domain checks still apply. |
-| Work with half-strips and invertible H0 | HIR; HSC-q0 for the determinant/one-shot route | HIR retains state; HSC-q0 repeats construction per call. |
-| Work without H0 | HSC or HPR | HSC gives the all-rank determinant route. HPR is a reusable, measured implementation with open general correspondence/bounds. |
-| Obtain a reusable dense reference | Dense-LU | Paid physical matrix construction and one native LU. |
-| Compare root-free boundary elimination | GBE | A usable exact solver retained as the paper's comparator. |
-| Study explicit Strassen products | BFM-Strassen and `solve_dedicated(..., product="strassen")` | Actual recursive code, with recursion ledgers. Performance conclusions are finite comparisons. |
-| Study displacement/approximant constructions | `solve_dedicated`, Structured-CC, Structured-halfstrip, multiplier variants | Trial/comparison implementations; see [REJECTED_ROUTES.md](../REJECTED_ROUTES.md). |
-| Reproduce measurements | [reproduce/](../reproduce/README.md) | Fixed inputs and serial measurements, independently checked by exact residuals. |
+## A first choice
 
-“Main interface” describes usability and documentation. It does not promote an
-implementation's mathematical guarantee. In particular, HPR and the extension
-adapters retain the limitations stated in the paper.
+| Problem or interest | Methods to consider |
+|---|---|
+| Banded systems | CC, CC-R, BFM, and Dense-LU |
+| Half-strips satisfying H0 | HIR and Dense-LU; HSC-q0 for a determinant or a single solve |
+| Half-strips without H0 | HSC for determinant and single solves; HPR and Dense-LU for repeated solves |
+| Determinant of a possibly singular half-strip | HSC |
+| Alternative boundary elimination | GBE |
+| Effect of Strassen multiplication | BFM-Strassen and Dedicated-Strassen |
+| Neighbouring structured constructions | The methods described in [trials and outcomes](../REJECTED_ROUTES.md) |
+
+This table suggests comparisons, rather than a universal fastest method.
+Some implementations have limitations beyond their input assumptions; these
+are stated below, including the open results for HIR and HPR.
 
 ## CC and CC-R: wrap, diagonalize, correct
 
-**Problem:** a nonsingular banded two-level Toeplitz matrix. The supplied field
-has size `q`, and the implementation checks `2*k<n`, `n | q-1`,
-`(q-1)/n > 2*k*n`, and the order of the supplied root. The convenience public
-interfaces construct a prime field; callers may supply `root=` explicitly.
+**Circulant correction (CC)** replaces the outer Toeplitz arrangement by a
+block-circulant one: the block diagonals wrap around the ends. A Fourier
+transform separates this circulant problem into n smaller Toeplitz systems.
+A low-rank correction accounts for the entries changed by wrapping. The
+resulting correction equations are solved using the Woodbury identity.
+If the matrix-valued symbol is singular, preparation includes an additional
+repair and accounts for it in the correction.
 
-**Idea:** wrap the outer block index to obtain a block-circulant matrix. Its DFT
-has `n` one-level Toeplitz frequency blocks. Correct the wrap-around entries by
-a smaller Woodbury system. If the matrix-valued symbol is singular, the setup
-constructs a repair and includes that repair in the correction.
+Preparation constructs these smaller problems and the correction. Subsequent
+solves apply the circulant inverse and the saved correction to each b.
+**CC-R** does more preparation: it represents each smaller Toeplitz inverse by
+four vectors, so applying it reduces to polynomial multiplication. The extra
+work can be worthwhile when many right-hand sides share the same T.
 
-**Setup and stored state:**
+These methods require a nonsingular banded T and suitable field size and roots.
+For a field with q elements, the conditions in this square-block implementation
+are `2*k < n`, `n` dividing `q-1`, and `(q-1)/n > 2*k*n`, with a primitive nth
+root of unity. These are the paper's **HB conditions**. The public functions
+use a prime field and can find the root; a caller may also supply it.
 
-1. [`cc_prepared.py`](../bttb_solvers/_internal/cc_prepared.py),
-   `CirculantCorrectionPrepared.__init__`, checks the domain, computes the symbol
-   determinant, performs any repair and chooses a valid circulant parameter.
-2. [`banded_bttb/circulant.py`](../bttb_solvers/_internal/banded_bttb/circulant.py)
-   constructs frequency lag vectors and the required inverse-corner information.
-3. [`banded_bttb/woodbury.py`](../bttb_solvers/_internal/banded_bttb/woodbury.py)
-   constructs and factors the correction matrix.
-4. CC-R additionally constructs `ToeplitzInverseFactors`: four vectors per
-   frequency, used through scalar polynomial convolutions.
+Use `prepare_cc` or `prepare_cc_r`. Both solve Tx=b and Tᵀx=b using the same
+preparation. Neither exposes a determinant calculation through this interface.
+The construction follows [Chesnokov and Van Barel (2010)](../REFERENCES.md#chesnokov-and-van-barel-2010).
 
-**Query:** `query(rhs, transpose=False)` applies the circulant inverse and the
-stored correction. `transpose=True` follows the literal transposed operations.
-CC uses one-level Toeplitz solves during queries; CC-R applies the retained
-four-vector factors. CC-R has extra preparation work and storage, so distinguish
-one-shot and repeated-query comparisons. Both public prepared arms expose solves
-only; their determinant identity is not a timed determinant API here.
+## CC-E and CC-E-R: work in an extension field
 
-**Compiled implementation:** [`cc_kernels.py`](../bttb_solvers/_internal/cc_kernels.py)
-selects FLINT implementations of the scalar/Toeplitz/correction operations.
-Some are dense cubic kernels replacing structured reference kernels. The
-arithmetic bound of the structured method does not automatically describe
-these replacements. Construction credit: [Chesnokov–Van Barel 2010](../REFERENCES.md#chesnokov-and-van-barel-2010).
+If the original field lacks the required root, an extension field may contain
+it. CC-E and CC-E-R put the coefficients into that extension, run CC or CC-R,
+and check that the answer belongs to the original prime field. The HB
+conditions must hold in the extension. If the characteristic divides n,
+an extension cannot supply the required primitive nth root.
 
-## CC-E and CC-E-R: the same construction over a supplied extension
-
-These embed prime-field input coefficients into `GF(p**d)`, use CC or CC-R there,
-and require every solution coordinate to descend to `GF(p)`. They are useful
-when a transform root is unavailable in the base field but exists in the
-extension. The HB inequalities must hold in the supplied extension.
-
-Use `extension_field(p, d)` and `root_of_unity(field, n)` before
-`prepare_cc_e(..., field=field, root=root)` or `prepare_cc_e_r(...)`.
-[`extension_field.py`](../bttb_solvers/_internal/extension_field.py) owns field and
-polynomial contexts; [`extension_kernels.py`](../bttb_solvers/_internal/extension_kernels.py)
-implements extension arithmetic, including regular-representation matrix kernels.
-
-Field/root construction, embedding and descent are separate from the timed
-solver phases in the reproduction driver. This is the paper's measured adapter;
-a general end-to-end extension acquisition/descent cost theorem is not claimed.
+Use `extension_field(p, d)` and `root_of_unity(field, n)`, then pass that field
+and root to `prepare_cc_e` or `prepare_cc_e_r`. These are the extension-field
+implementations measured in the paper. The measurements treat constructing
+the field and root, converting the input, and returning to the original field
+separately from solving. Include that work when comparing total time for your
+own problem; a general cost theorem for the complete procedure is not claimed.
 
 ## BFM: eliminate interiors and merge boundary fronts
 
-**Problem:** nonsingular banded input. No transform root or H0 assumption.
-The public interface supplies a prime-field adapter.
+**Boundary-front merge (BFM)** divides the block rows into intervals. Within
+each interval it eliminates interior unknowns, leaving equations for the
+boundary unknowns. It then merges neighbouring intervals and repeats until
+only the final boundary system remains. Preparation saves the equations
+needed to recover the eliminated unknowns. A solve propagates the right-hand
+side through this construction and recovers x.
 
-**Setup:** [`boundary_front/api.py`](../bttb_solvers/_internal/boundary_front/api.py)
-constructs `BoundaryFrontPrepared`. `_Core` builds a balanced tree of intervals.
-[`homogeneous.py`](../bttb_solvers/_internal/boundary_front/homogeneous.py) eliminates
-interiors and merges the remaining boundary equations. Equal interval types
-share prepared data. [`selection.py`](../bttb_solvers/_internal/boundary_front/selection.py)
-performs guarded row selection; the root boundary system is inverted once.
-The retained objects are local dense fronts and maps, not a dense `N`-by-`N`
-physical inverse.
+BFM requires a nonsingular banded matrix. It needs neither roots of unity nor
+invertibility of the outermost block. Use `prepare_bfm`. It solves both Tx=b
+and Tᵀx=b, but does not expose a determinant calculation. For these Toeplitz
+inputs, the identity Tᵀ=JTJ, where J reverses coordinates, lets the transpose
+solve use the same preparation.
 
-**Query:** [`query.py`](../bttb_solvers/_internal/boundary_front/query.py) batches
-upward and downward propagation by interval type. For raw two-level Toeplitz
-lags, transpose queries reverse the RHS and result, reusing the same core through
-`T^t = J T J`. The internal arbitrary-dense-block interface instead prepares a
-second transposed core lazily; it cannot assume Toeplitz persymmetry. Solves are
-checked by the selected residual observer. There is no determinant API.
+BFM normally uses ordinary matrix multiplication. Choose
+`product="strassen"` to obtain **BFM-Strassen**. The
+[Strassen example](../examples/README.md#explore-neighbouring-approaches) shows
+how to check whether recursive Strassen products actually occur.
 
-**Strassen:** `product="strassen", strassen_leaf=16` selects explicit recursion
-in [`boundary_front/kernel.py`](../bttb_solvers/_internal/boundary_front/kernel.py).
-The default product is classical. Inspect `prepared.state.statistics()` for
-setup/query counters and `strassen_ledger`. Changing this switch changes local
-products; it does not turn a front into a displacement generator.
+## GBE: another boundary-elimination comparison
 
-## GBE: guarded scalar boundary elimination
+**Guarded boundary elimination (GBE)** also eliminates unknowns while keeping
+boundary equations. Its way of organizing the elimination and applying the
+saved equations differs from BFM's. “Guarded” refers to explicit checks in the
+calculation, including exact checks of the resulting solutions.
 
-GBE solves the same nonsingular banded class without transform roots. It is the
-retained comparison for the boundary-front approach. It uses guarded boundary
-normalization and individual query propagation rather than BFM's batched query
-schedule. At width one, a dedicated three-block recurrence is used.
+It solves nonsingular banded systems without requiring transform roots. Use
+`prepare_gbe` for forward and transpose solves; there is no determinant
+calculation in this interface. The default uses the Python arithmetic version.
+Replacing its basic calculations by FLINT routines was slower on most of the
+paper's tested cases, so that replacement remains an optional comparison.
 
-`prepare_gbe` enters [`guarded_boundary/unified.py`](../bttb_solvers/_internal/guarded_boundary/unified.py)
-with `strategy="rootfree"`. Setup selects `operations.prepare` for width one or
-`banded.prepare_banded` otherwise. Prepared forward/transpose queries include
-exact physical residual guards. It exposes no determinant service. `backend="python"`
-is the retained comparator; the compiled replacement was slower on most of the
-paper's sampled cases.
+## HIR: solve by recurrence and impose the final boundary conditions
 
-## HIR: invert H0, generate impulses, factor a terminal system
+**Half-strip impulse response (HIR)** uses invertibility of A[-w] to express
+successive unknown blocks by a recurrence. Preparation computes responses to
+elementary inputs, then forms and factors the smaller system imposing the
+final boundary conditions. For a new b, it computes the forced response,
+solves those boundary equations, and reconstructs x.
 
-**Problem:** half-strip input with invertible `F0=A[-w]`, and a prime supporting
-the required NTT lengths. The public wrapper selects `n_impulse` response layout
-and a dense terminal.
+Use `prepare_hir`. Besides H0, this implementation requires roots of unity
+for the polynomial products used in the recurrence. It provides forward and
+transpose solves and a determinant. These outputs pass the finite exact checks
+reported here. As stated in the paper, the general correspondence of its
+determinant and transpose calculations to the written forward construction
+remains unproved.
 
-**Setup:** [`hir_prepared.py`](../bttb_solvers/_internal/hir_prepared.py) constructs
-[`halfstrip/solver.py`](../bttb_solvers/_internal/halfstrip/solver.py)'s `HalfStripSolver`.
-`leading.py` builds the compact Toeplitz inverse of `F0`. `recurrence.py` and
-`convolve.py` compute causal responses using CDQ convolution. The impulse tails
-form a terminal matrix, which `dense.py` factors and retains.
+## HSC and HSC-q0: determinant and single solves for half-strips
 
-**Query:** run the forced causal recurrence, solve the terminal system, and
-reconstruct physical coordinates. A transpose query reverses both coordinate
-axes around the forward solve, using persymmetry. The prepared object exposes
-its determinant. The executed determinant/transpose services have finite exact
-checks; their full correspondence to the written forward construction remains
-unproved, as stated in the paper.
+**Half-strip classical (HSC)** allows the outermost block to be singular. It
+makes a controlled low-rank correction to construct the required power series,
+then accounts for that correction in a smaller structured boundary problem.
+Polynomial approximation computes the determinant and, when T is nonsingular,
+the solution.
 
-## HSC and HSC-q0: carrier, defect and mosaic terminal
+Use `solve_hsc(lags, n, w, b)`. The result contains `determinant`, `solution`,
+and `singular`. HSC returns determinant zero when T is singular; it does not
+offer a solution of a singular system. To request only the determinant, omit b.
+Every call repeats the construction, even when T is unchanged.
 
-**Problem:** half-strip matrices, allowing singular `F0`. HSC supplies a
-determinant at every rank, and a solution when the physical matrix is nonsingular.
-The public wrapper uses the full pipeline for each right-hand side.
+**HSC-q0** is the version for invertible A[-w]. This condition reduces the
+number of power-series coefficients required, from `n+w+3*n*w` to `n+w`.
+Use `solve_hsc_q0`; it rejects an input failing H0 and also repeats the
+construction on every call. Here “q0” names the zero-corank case.
 
-**Construction:**
+## HPR: save the half-strip preparation for repeated solves
 
-1. `halfstrip_core/field_setup.py` supplies a working algebra and labels. Guards
-   may restrict an added algebra and restart from the original input.
-2. `carrier.py` adds a controlled low-rank correction so that an inverse-series
-   carrier can be computed even when `F0` is singular.
-3. `joint.py` compiles the small defect data and the truncated dictionaries
-   needed for the terminal system and physical reconstruction.
-4. `mosaic.py` builds a mosaic Toeplitz terminal and computes its determinant and
-   affine solve through approximant bases.
-5. `solver.py` applies the determinant scaling and reconstructs/descends the
-   physical solution.
+**Half-strip prepared reconstruction (HPR)** saves the part of the HSC
+construction depending only on T. New right-hand sides use those saved data
+to form boundary equations, solve them, and recover x. It allows a singular
+outermost block, provided the full matrix is nonsingular.
 
-The public `solve_hsc` calls `halfstrip_core/reuse.py::oneshot_solve`: despite the
-module's name, that function repeats the entire construction. It returns a
-result dictionary, not a reusable preparation.
+Use `prepare_hpr`. The default factors the boundary matrix by ordinary dense
+LU and reuses those factors. This is the HPR implementation timed in the paper.
+It offers forward and transpose solves and a determinant. It used less memory
+than full dense LU on some reported cases, but did not win the CPU-time
+comparisons. Its general theorem for prepared solves remains open.
 
-HSC-q0 uses [`hsc_solver.py`](../bttb_solvers/_internal/hsc_solver.py) with
-`precision_mode="q0_L"`. It checks that the outermost-block corank is zero and
-reduces source precision to `n+w`; otherwise it refuses. It remains a one-shot
-construction. In full precision the source window is `n+w+3*n*w`.
+Two experimental choices change how the boundary equations are solved:
 
-The linear/polynomial algebra behind the terminal is described by the
-[PM-Basis and approximant-basis sources](../REFERENCES.md#approximant-and-polynomial-matrix-algebra).
+| `terminal_query` | What is saved and reused |
+|---|---|
+| `"lu"` (default) | LU factors of the boundary matrix |
+| `"division"` | A polynomial approximation basis, used to solve by polynomial division |
+| `"appended"` | The matrix-dependent data for a new polynomial approximation problem with each b |
 
-## HPR: retain preparation, choose an explicit terminal-query method
+The latter two choices are research comparisons with their own checks and
+unresolved theoretical questions. Their timings should be distinguished from
+the default HPR timings. See [trials and outcomes](../REJECTED_ROUTES.md).
 
-`prepare_hpr` calls `halfstrip_core/reuse.py::prepare_failed_h0_halfstrip`.
-`FailedH0Reuse` owns the working algebra and restart lifetime. Its `_Core` first
-runs the same right-hand-side-independent carrier/defect/terminal construction
-as HSC and retains the dictionaries `W`, `B`, `G` and reconstruction shuffle.
+## Dense references: ordinary exact linear algebra
 
-The `terminal_query` argument has three distinct meanings:
+`prepare_dense_lu` forms the full N-by-N matrix, computes one LU factorization,
+and reuses it for forward solves, transpose solves, and the determinant. This
+**Dense-LU** comparison is especially useful when assessing repeated solves:
+ordinary LU can reuse preparation too. Use the `with` statement shown in the
+practical guide to release its stored matrices when finished.
 
-| Value | Retained terminal data | Work per query | Role |
-|---|---|---|---|
-| `"lu"` | Dense terminal matrix and guarded LU factors | Forward/back substitution, then physical reconstruction | The paper's timed HPR implementation and the public default. |
-| `"division"` | Root approximant basis and truncated inverse of its reversal | Polynomial division/remainder, then reconstruction | Experimental correspondence/cost route with runtime certificate checks. |
-| `"appended"` | Terminal coefficient window and degree/profile data | A new affine approximant problem with an appended RHS | A comparison for separating reuse of the front end from terminal-query work. |
+The implementation requires a nonsingular matrix and the Linux x86-64 library
+versions in the [installation instructions](../README.md#install-and-try).
+The reproduction tables also include **Dense**, which performs separate
+elimination calculations instead of reusing one LU factorization. These two
+comparisons measure different amounts of work.
 
-The constructor is shared, but these query implementations must be reported
-separately. HPR's general prepared-query theorem remains open. In the recorded
-one-LU comparisons, the default implementation has a memory advantage on named
-cases and no tested CPU win. That is a finite performance finding, not a
-rejection of the correctness of every HPR query construction.
+## Implementations and mathematical bounds
 
-## Dense references
+FLINT supplies fast exact arithmetic for many of these methods. Some FLINT
+routines use ordinary dense calculations in places where a theoretical
+construction uses structured operations. A good running time therefore does
+not by itself demonstrate the paper's asymptotic bound. The paper's general
+fast-exponent equality-test trees are not implemented here.
 
-`prepare_dense_lu` uses [`dense_lu.py`](../bttb_solvers/_internal/dense_lu.py).
-`NativeLU.from_problem` builds the **physical** `N`-by-`N` matrix; `factorize`
-calls native FLINT LU once. Forward and literal transpose batches reuse those
-factors. The determinant is permutation sign times the diagonal product. Its
-native allocations must be closed; the public context manager does this.
-This baseline refuses singular physical matrices and unsupported native ABIs.
-
-The reproduction label `Dense` instead calls public python-flint elimination
-separately for forward, transpose and determinant services. Keep these reference
-costs separate when reading or generating speedups.
-
-## Trials and references
-
-The dedicated displacement methods, structured half-strip prototype, structured
-CC reference and scalar-backend controls have different inputs, stored data and
-costs from the main routes above. Their purpose and current disposition are in
-[REJECTED_ROUTES.md](../REJECTED_ROUTES.md). CK and KN are author abbreviations,
-explained in the [code guide](CODE_GUIDE.md#ck-and-kn-what-these-prefixes-mean)
-and [references](../REFERENCES.md), not unlabelled recommendations.
+For alternatives involving displacement generators, other polynomial
+multipliers, and different boundary constructions, see
+[trials and outcomes](../REJECTED_ROUTES.md). The [code guide](CODE_GUIDE.md)
+explains where the main methods and these experiments live; the
+[references](../REFERENCES.md) give their mathematical sources.

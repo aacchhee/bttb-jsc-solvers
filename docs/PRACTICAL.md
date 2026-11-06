@@ -1,109 +1,153 @@
 # Solving your own problem
 
-This guide is for choosing a solver, supplying data and measuring the service
-you actually need. The package works over exact finite fields. Its inputs are
-integer residues, with no floating-point tolerance or numerical pivoting model.
-The detailed [solver descriptions](SOLVERS.md) state each method's domain.
+Suppose you have a two-level Toeplitz matrix T and want to solve Tx=b,
+perhaps for several vectors b. This page explains how to supply T, try a
+method, and decide which method is worth using for your problem.
 
-## Choose candidates, then measure
+All calculations here are exact, over a finite field. In the usual case the
+entries are integers modulo a prime p. The examples use p=998244353. This
+software does not solve systems over the real or complex numbers.
 
-There is no hardware-independent fastest method. Physical order is `N=n*n`,
-not `n`; bandwidth, field roots, number of right-hand sides and memory all
-change the comparison.
+## Which method should I try?
 
-| Your problem | Useful first candidates | What decides the choice |
-|---|---|---|
-| Narrow banded, suitable roots in the base field | CC, CC-R, Dense-LU | CC-R retains more state for repeated queries. Include its setup cost. |
-| Banded, base-field CC root/domain unavailable | BFM, Dense-LU; HIR if H0 and its transform requirements hold | BFM does not need transform roots. An extension-field CC comparison is also available, with field acquisition paid. |
-| Broad banded or modest physical order | Dense-LU alongside a structured candidate | Dense compiled arithmetic can win despite its storage and asymptotic costs. |
-| Half-strip, invertible outermost block H0 | HIR, Dense-LU | Include impulse construction and terminal factorization, then the actual RHS batch. |
-| Half-strip, singular outermost block | Dense-LU, HPR | Dense-LU is the CPU baseline; HPR is useful for studying the measured storage tradeoff. Its general prepared-query theorem remains open. |
-| Half-strip determinant, including singular physical matrices | HSC | Returns determinant zero at singularity. HSC-q0 requires H0; HIR/HPR provide determinant services in their documented scopes. |
+If your matrix is banded, start by comparing **CC-R**, **BFM**, and **Dense-LU**.
+CC-R needs suitable roots of unity in the field; BFM does not. Dense-LU is
+ordinary LU factorization of the full matrix, using a fast exact-arithmetic
+library. It is often competitive for smaller problems or wider bands.
 
-The paper's finite bandwidth crossover is evidence for its tested inputs and
-machine. It is not a rule that a particular width always chooses a solver.
-GBE and the explicit Strassen routes are available for comparisons; their
-measured outcomes and other trials are in [REJECTED_ROUTES](../REJECTED_ROUTES.md).
+For a half-strip matrix, the first question is whether its outermost permitted
+block A[-w] is invertible. This is the paper's assumption **H0**.
+
+| Your half-strip problem | Start with |
+|---|---|
+| A[-w] is invertible | HIR and Dense-LU |
+| A[-w] is singular, but T is nonsingular | HPR and Dense-LU |
+| You need det(T), including when T is singular | HSC |
+
+HPR is worth considering when memory matters. It did not beat reusable dense
+LU in CPU time in the paper's comparisons, and its general theorem for repeated
+solves remains open. A singular A[-w] does **not** imply that T is singular.
+
+The [solver guide](SOLVERS.md) explains these methods and their assumptions.
+There is no single fastest choice for all sizes, bandwidths, fields, and
+numbers of right-hand sides. The comparison below lets you try your own case.
+
+## Try a supplied example
+
+After following the [installation instructions](../README.md#install-and-try),
+run these commands from the repository's main directory:
+
+```bash
+python examples/solve.py examples/problems/banded.json --algorithm CC-R
+python examples/compare.py examples/problems/banded.json
+```
+
+The first command solves one example and prints the answer. The second solves
+the same problem by several methods and lists their running times. Every answer
+is checked by multiplying it by the original matrix. If a method's assumptions
+are not satisfied, the comparison explains the failure and tries the others.
+
+For half-strips, try:
+
+```bash
+python examples/compare.py examples/problems/halfstrip.json --algorithms Dense-LU HIR HPR
+```
+
+To use your own data, copy one of the files in `examples/problems/`, replace its
+entries, and give the new filename to the same commands. These are ordinary
+text files in JSON format; the [example instructions](../examples/README.md#input-format)
+explain their fields.
 
 ## Supply the matrix without expanding it
 
-Flatten `(block_row, inner_row)` as `t*n+a`. Each lag row has `2*n-1` entries,
-ordered by inner lag `-(n-1), ..., n-1`.
+Here n is both the number of block rows and the order of each block. Thus T
+has n² rows and columns. You supply the Toeplitz coefficients rather than all
+n⁴ matrix entries.
 
-- Banded width `k`: supply `2*k+1` rows, outer lags `-k, ..., k`.
-- Half-strip width `w`: supply `n+w` rows, outer lags `-w, ..., n-1`.
+Write T's blocks as T[t,u]=A[t-u]. Each A[d] is itself Toeplitz. Store it as a
+row of 2n−1 coefficients, in order from diagonal index −(n−1) to n−1. The
+middle coefficient is on the main diagonal. Our sign convention is
+A[d][a,b]=a[d,a−b], so negative indices describe upper diagonals.
 
-For either class, with `width=k` or `w`,
+For a banded matrix, supply the coefficient rows for A[-k], …, A[k], in that
+order. Blocks farther from the main block diagonal are zero. For a half-strip,
+supply A[-w], …, A[n−1]. There are at most w block superdiagonals, while all
+block subdiagonals are allowed.
+
+For example, this banded block matrix has width k=1:
 
 ```text
-T[t*n+a, u*n+b] = lags[t-u+width][n-1+a-b]
+       [ 2I   I   0   0 ]
+T  =   [  0  2I   I   0 ]
+       [  0   0  2I   I ]
+       [  0   0   0  2I ]
 ```
 
-An outer lag outside the supplied range is zero. The transpose is the literal
-matrix transpose over the same field. A singular outermost block is different
-from a singular physical matrix: the former can still give a solvable system.
+Take n=4, so I is the 4-by-4 identity and T is 16-by-16. Its three coefficient
+rows are:
 
-The [JSON examples](../examples/README.md#input-format) accept one or more
-forward and transpose RHS vectors. Copy a file from `examples/problems/`,
-replace its lag coefficients and RHS vectors, then run:
-
-```bash
-python examples/solve.py my_problem.json --algorithm CC-R
-python examples/compare.py my_problem.json --algorithms Dense-LU CC CC-R BFM
+```text
+A[-1]:  [0, 0, 0, 1, 0, 0, 0]
+A[ 0]:  [0, 0, 0, 2, 0, 0, 0]
+A[ 1]:  [0, 0, 0, 0, 0, 0, 0]
 ```
 
-`compare.py` reports each candidate's domain errors, checks every successful
-answer by the raw matrix action, and compares the answers between methods.
-It measures one local observation per candidate, including setup and both
-RHS batches. For repeatable paper measurements use [reproduce/](../reproduce/README.md).
+These three rows form `lags` in the input file or Python call. A vector b is
+listed block by block: first its n entries for block row 0, then those for
+block row 1, and so on. Each vector has n² entries. Entries are reduced modulo p.
 
-## Reuse preparation in Python
+## Solve several systems with the same matrix
+
+Most methods first prepare data depending only on T, much as LU factorization
+does. You can then solve for many vectors b without repeating this work.
+Here is the preceding example in Python:
 
 ```python
 from bttb_solvers import prepare_cc_r
-from bttb_solvers.matrices import action
 
-n, k = 4, 1
-lags = [[0] * (2*n-1) for _ in range(2*k+1)]
-lags[k][n-1] = 2                 # diagonal blocks: 2 I
-lags[0][n-1] = 1                 # first block superdiagonal: I
-rhs = [list(range(n*n)), [1] * (n*n)]
-with prepare_cc_r(lags, n, k) as solver:
-    solutions = solver.solve_many(rhs)
-    transposed = solver.solve_many(rhs, transpose=True)
-    for b, x in zip(rhs, solutions):
-        assert action(lags, n, k, x) == b
+lags = [
+    [0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 0, 2, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+]
+b = list(range(16))
+c = [1] * 16
+
+with prepare_cc_r(lags, n=4, k=1) as solver:
+    x = solver.solve(b)              # T x = b
+    z = solver.solve(c)              # T z = c, using the same preparation
+    y = solver.solve_transpose(b)    # Tᵀ y = b
 ```
 
-Prepare once for a fixed matrix and reuse that object for additional RHS
-vectors. Closing the object releases retained native state. The prepared
-interfaces support `solve`, `solve_transpose` and `solve_many`; determinant
-availability differs by method. HSC and HSC-q0 are one-shot calls and repeat
-construction for every RHS. See [SOLVERS](SOLVERS.md) for their return values.
-Use the kernel contexts serially within a process, since backend rebinding is
-process-global.
+The `with` statement releases the stored data when you finish. You can also
+use `solve_many([b, c])` to solve a list of systems. HSC and HSC-q0 differ:
+each call repeats the construction. Their purpose and determinant output are
+explained in the [solver guide](SOLVERS.md).
 
-`banded_to_halfstrip(lags, n, k)` in `bttb_solvers.matrices` supplies the zero
-outer-lag rows needed to try a half-strip method on banded input. The
-comparison example performs this conversion automatically.
+Run these examples one at a time. Some arithmetic settings are shared within
+a Python process, so simultaneous calls from different threads are unsupported.
 
-## Interpret time, storage and failures
+## Decide what “fastest” means for your use
 
-Measure the workload you will run: one solve, many forward RHS vectors, a
-forward/transpose pair, or a determinant plus solves. Include preparation,
-field/root acquisition and required conversions in an end-to-end comparison.
-The examples' independent residual checking is extra verification work outside
-the solver timer. Internal solver guards, including BFM/GBE residual guards,
-remain inside it. Import and first native-library load can affect a short
-single-process example; the paper driver has explicit measurement boundaries.
+For a single system, compare the total time including preparation. For a fixed
+matrix and many right-hand sides, compare preparation plus all the solves you
+expect to perform. Include transpose solves and determinant computation if you
+need them. A method with more preparation can become worthwhile after enough
+solves.
 
-`backend="flint"` is the usual compiled implementation; `backend="python"`
-selects the reference arithmetic where exposed. They need not use identical
-arithmetic primitives. Dense-LU's native binding requires the documented Linux
-x86-64, python-flint 0.9.0 / FLINT 3.6.0 combination. Refusals are reported rather
-than silently switching algorithms. A failed domain check may suggest another
-method; a failed exact residual is an implementation error to investigate.
+The comparison example includes preparation and the requested solves in its
+time. It checks answers separately afterwards; checks performed inside the
+algorithms remain part of their time. A single run on a tiny example is only
+a first indication, since loading the arithmetic library can take appreciable
+time. For the paper's fixed experiments and repeated measurements, see
+[reproduce/](../reproduce/README.md).
 
-If you need to change the implementation, continue with the
-[code and representation guide](CODE_GUIDE.md). For neighbouring constructions,
-read the [trial map](../REJECTED_ROUTES.md) and its linked references.
+The examples normally use FLINT, an exact-arithmetic library installed with
+the package. The Dense-LU comparison requires Linux x86-64 and the versions
+listed in the installation instructions. If a method reports an unmet
+assumption, try another applicable method. If a computed answer fails the
+exact multiplication check, that is an error to investigate.
+
+To understand how a method is implemented, continue with the
+[code guide](CODE_GUIDE.md). To explore alternatives studied in the paper,
+see [trials and outcomes](../REJECTED_ROUTES.md).

@@ -16,7 +16,7 @@ Checked on Linux x86-64 with python-flint 0.9.0 / FLINT 3.6.0:
   TeX document compiles successfully.
 - The user-input solve/comparison examples and the Strassen, polynomial and
   supplied-generator examples pass their exact checks. All 107 substantive
-  internal modules have documented roles and entries in the code guide.
+  internal modules have documented roles and entries in the detailed file reference.
 - The `--large --list` plan contains 158 cases and 2,420 sequential observations.
   The full large run has not been executed during this packaging check.
 

@@ -17,7 +17,8 @@ depends on dimensions, bandwidth, roots, RHS reuse and hardware.
 **I want to study this method and neighbouring approaches.**
 Read the [solver guide](docs/SOLVERS.md) for each construction's setup, retained
 state, queries and restrictions. The [code guide](docs/CODE_GUIDE.md) maps the
-layers, representations, basic operations and every internal module.
+matrix representations, basic operations and source files. A separate
+[file reference](docs/FILE_REFERENCE.md) lists every internal module.
 [Trials and outcomes](REJECTED_ROUTES.md) separates alternative constructions
 and nondefault backends from the main solver interfaces, with
 [paper references](REFERENCES.md) explaining CK, KN and related kernels.
