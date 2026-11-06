@@ -66,6 +66,3 @@ here. The fast-exponent half-strip theorem is also distinct from the bounded
 compiled `Structured-halfstrip` control: timing that control does not measure
 an implementation of all the theorem's fast primitives.
 
-Integer lifting and unrelated exploratory methods are outside this paper and
-are not included in this repository. This file records the roles and limits of
-the retained code; it does not attempt to preserve an unrelated research archive.
