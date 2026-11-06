@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Field setup and common representation tools.
+
+Role: Shared. Acquire nonzero evaluation labels and an owning coefficient algebra; guard restrictions and descent remain attached to that construction.
+
+Entry points: setup_label_algebra; LabelAlgebraContext.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from itertools import product
 from bttb_solvers._internal.halfstrip_core.exact import PrimeField, pd, pm, pgcd, ps
 from bttb_solvers._internal.native_field_view import NativeBaseFieldView

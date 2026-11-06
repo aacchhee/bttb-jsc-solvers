@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial. Acquire the initial structured carrier for the explicit-history half-strip comparison. Main HSC/HPR use halfstrip_core/carrier.py instead.
+
+Entry points: InitialCarrier.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import matrix_product, _inverse
 from bttb_solvers._internal.constant_profile import rank_profile_kernel
 from bttb_solvers._internal.q0_source import RawToeplitzLags, CompactInverse

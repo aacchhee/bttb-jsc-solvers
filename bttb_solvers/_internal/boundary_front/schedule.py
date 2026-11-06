@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""BFM local-front implementation.
+
+Role: Main/shared. Balanced occurrence tree and batches of equal interval types.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from dataclasses import dataclass, field as dc_field
 
 

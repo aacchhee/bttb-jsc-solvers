@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Compact Cauchy transform operations used by the grouped source/chart constructions.
+
+Entry points: CompactCauchy.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.fast_linear import inverse_and_determinant
 
 

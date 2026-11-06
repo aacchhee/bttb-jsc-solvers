@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Main/shared. Compile the small defect, degree shifts and W/B/G reconstruction dictionaries for main HSC/HPR.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .exact import (pzeros, peye, pmat, pcut, transpose, clean, sa, ss,
                       sn, scale, shift)
 from .poly import sm, sinv, pmm

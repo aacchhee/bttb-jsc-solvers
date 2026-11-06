@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial/shared. Compile the explicit-history joint-defect representation. Main HSC/HPR use halfstrip_core/joint.py instead.
+
+Entry points: compile_joint.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from types import SimpleNamespace
 from bttb_solvers._internal.joint_state import JointState
 from bttb_solvers._internal.joint_valuation import minimum_active, extract_common

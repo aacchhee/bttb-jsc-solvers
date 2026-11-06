@@ -1,5 +1,15 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""KN supplied-generator algebra.
+
+Role: Shared. Khichane-Neiger-related scalar polynomial, matrix and degree-budget utilities, reused by both front-end and terminal components.
+
+Entry points: Polynomial.
+
+References: Khichane and Neiger (2026); see REFERENCES.md for the precise
+approximant/kernel sources and preprint scope.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core import uniform_terminal as uniform
 
 

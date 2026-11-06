@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Rectangular Cauchy subviews and products over selected row/column labels.
+
+Entry points: RectangularCauchy.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.cauchy_transforms import CauchyCatalog
 from bttb_solvers._internal.compact_cauchy import CompactCauchy
 

@@ -84,6 +84,32 @@ class Solvers(unittest.TestCase):
             with self.subTest(algorithm=fn.__name__):
                 self.check_prepared(fn(rows,3,1,field=F,root=root),rows,3,1)
 
+    def test_singular_symbol_repair(self):
+        n,k,p=7,2,s.PRIME
+        zeta=pow(3,(p-1)//8,p);h=[3,7,11]
+        rows=[[0]*(2*n-1) for _ in range(2*k+1)]
+        for i,c in enumerate(h):rows[i+1][n-1]=(1+zeta)*c%p
+        for m in range(5):
+            rows[m][n]=sum(h[i]*h[m-i] for i in range(max(0,m-2),min(2,m)+1))%p
+        rows[2][n-2]=zeta
+        self.assertNotEqual(int(dense_matrix(rows,n,k).det()),0)
+        for fn in (s.prepare_cc,s.prepare_cc_r):
+            q=fn(rows,n,k)
+            self.assertEqual(q.state.metadata['repair_rank'],1)
+            self.check_prepared(q,rows,n,k)
+
+    def test_strassen_recursion(self):
+        rows=banded(16,2)
+        q=s.prepare_bfm(rows,16,2,product='strassen')
+        self.check_prepared(q,rows,16,2)
+        ledger=q.state.statistics()['strassen_ledger']
+        self.assertGreater(sum(stage.get('strassen_nodes',0) for stage in ledger.values()),0)
+        rows=banded(8,1);b=list(range(1,65))
+        r=s.solve_dedicated(rows,8,1,b,b,product='strassen',strassen_leaf=8)
+        self.assertEqual(action(rows,8,1,r['solution']),b)
+        self.assertEqual(action(rows,8,1,r['transpose_solution'],transpose=True),b)
+        self.assertGreater(r['statistics']['dense_scope_ledger'].get('strassen_recursive_nodes',0),0)
+
     def test_dimension_guards(self):
         with self.assertRaises(ValueError):s.prepare_cc([[0]*3]*3,2,1)
         with self.assertRaises(ValueError):s.prepare_bfm([[0]*7]*3,4,0)

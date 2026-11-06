@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Repair a singular Toeplitz matrix-valued symbol within the acquired coefficient context; return the explicit low-rank correction.
+
+Entry points: repair_toeplitz_symbol.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.polynomial import ProductTree, trim
 from bttb_solvers._internal.constant_profile import rank_profile_kernel
 from bttb_solvers._internal.fast_scalar import FastScalar

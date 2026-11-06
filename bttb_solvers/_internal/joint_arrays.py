@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial/shared. Fixed-window scalar series operations, polynomial factor trimming and permutation signs for the array-based joint representation.
+
+Entry points: SeriesOps; trim_factor.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip.allfield_poly import make_multiplier
 
 

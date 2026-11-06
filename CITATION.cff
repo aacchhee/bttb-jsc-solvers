@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using these solvers."
+type: software
+title: "Exact banded and half-strip two-level Toeplitz solvers"
+version: 1.0.0
+date-released: 2026-11-06
+license: AGPL-3.0-or-later
+repository-code: "https://github.com/aacchhee/bttb-jsc-solvers"
+authors:
+  - family-names: Chesnokov
+    given-names: Andrey
+    orcid: "https://orcid.org/0009-0004-4687-1810"

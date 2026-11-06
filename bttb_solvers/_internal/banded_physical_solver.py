@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial. Dispatch the dedicated raw-lag solve to narrow or wide physical acquisition, paying front end, generator acquisition and both queries.
+
+Entry points: solve_banded.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.narrow_physical_solver import solve_narrow
 from bttb_solvers._internal.wide_physical_solver import solve_wide, SingularPhysicalMatrix
 

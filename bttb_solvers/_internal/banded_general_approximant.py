@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. General-order canonical approximant operations used by the raw polynomial front end.
+
+Entry points: GeneralApproximant.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.kn_services import Services
 from bttb_solvers._internal.kn_polynomial import count
 

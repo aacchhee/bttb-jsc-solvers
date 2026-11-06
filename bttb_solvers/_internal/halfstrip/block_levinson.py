@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Trial/shared. Block-Levinson terminal alternative with its own checked domain.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .dense import LU
 
 

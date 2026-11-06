@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Main/shared. Build/check mosaic Toeplitz terminal approximant problems and expose determinant/affine reconstruction data.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip.approximant import pm_basis, shifted_row_degrees, polynomial_matrix_product
 from bttb_solvers._internal.halfstrip.allfield_poly import make_multiplier
 

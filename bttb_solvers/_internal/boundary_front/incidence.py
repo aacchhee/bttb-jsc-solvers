@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""BFM local-front implementation.
+
+Role: Main/shared. Describe how retained/seam/exterior rows enter a front merge.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from dataclasses import dataclass
 
 from bttb_solvers._internal.guarded_boundary.banded import retained

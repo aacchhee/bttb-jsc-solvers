@@ -2,117 +2,100 @@
 
 Code accompanying **Exact banded and half-strip two-level Toeplitz solvers over
 finite fields: practical routes and exponent bounds**, by Andrey Chesnokov.
-The algorithm names below match the paper.
+The algorithm names match the paper. Inputs are exact finite-field lag
+coefficients; the physical matrix order is `N=n*n`.
 
-## Install
+## Start with your goal
 
-Python 3.10 or later is required. For the paper's native dense-LU baseline, use
-Linux x86-64 with the pinned python-flint 0.9.0 wheel (FLINT 3.6.0).
+**I have a banded or half-strip problem and want to solve it quickly.**
+Start with the [practical guide](docs/PRACTICAL.md): choose candidates for your
+matrix, supply lag coefficients, reuse setup and compare the service you need.
+The [runnable examples](examples/README.md) accept your own JSON input and check
+every answer exactly. Include Dense-LU in the comparison; the fastest choice
+depends on dimensions, bandwidth, roots, RHS reuse and hardware.
+
+**I want to study this method and neighbouring approaches.**
+Read the [solver guide](docs/SOLVERS.md) for each construction's setup, retained
+state, queries and restrictions. The [code guide](docs/CODE_GUIDE.md) maps the
+layers, representations, basic operations and every internal module.
+[Trials and outcomes](REJECTED_ROUTES.md) separates alternative constructions
+and nondefault backends from the main solver interfaces, with
+[paper references](REFERENCES.md) explaining CK, KN and related kernels.
+The examples include polynomial, supplied-generator and actual Strassen routes.
+
+## Install and try
+
+Python 3.10 or later is required. The native dense-LU baseline requires Linux
+x86-64 and the pinned python-flint 0.9.0 wheel (FLINT 3.6.0).
 
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -e .
+python examples/compare.py examples/problems/banded.json
 python -m unittest discover -s tests -v
 ```
 
-No research repository, private data, host configuration, downloaded solver
-snapshot or compiler is needed. FLINT is installed as a dependency; its code
-and binaries are not vendored here.
+FLINT is installed as a dependency; its sources and binaries are not vendored.
+The package runs independently of the original research workspace.
 
-## Algorithms
+## Main interfaces
 
-| Name | Construction | Outputs and requirements |
+| Paper name | Public entry point | Useful for / key restriction |
 |---|---|---|
-| CC | Circulant correction | Prepared forward and literal transpose solves in the paper's supplied-root HB domain. |
-| CC-R | CC with retained frequency factors | Same domain and outputs; retains four-vector Toeplitz inverse factors. |
-| CC-E | CC over a supplied extension field | Prime-field inputs; solutions descend to the prime subfield. |
-| CC-E-R | CC-R over a supplied extension field | Retained factors over that extension. |
-| BFM | Boundary-front merge | Nonsingular banded input; prepared forward and transpose solves. Classical and explicit Strassen products. |
-| HSC | Half-strip classical determinant | Determinant at every rank and one nonsingular solve. Construction repeats per right-hand side. |
-| HSC-q0 | HSC with guarded zero-corank precision reduction | Refuses a singular outermost block. |
-| HIR | Half-strip impulse response | Requires an invertible outermost block and suitable NTT roots; determinant and prepared solves. |
-| HPR | Half-strip prepared reconstruction | Allows a singular outermost block. The timed implementation retains a dense terminal factorization. |
-| GBE | Guarded boundary elimination | Banded forward/transpose comparator, with no determinant service. |
-| Dense-LU | Reusable native FLINT LU | One paid factorization, batched forward and transpose queries, determinant. |
+| CC, CC-R | `prepare_cc`, `prepare_cc_r` | Banded prepared solves in the supplied-root domain; CC-R retains inverse factors |
+| CC-E, CC-E-R | `prepare_cc_e`, `prepare_cc_e_r` | Extension-field CC adapters, with checked descent to the prime subfield |
+| BFM | `prepare_bfm` | Root-free boundary-front prepared solves; classical or explicit Strassen products |
+| GBE | `prepare_gbe` | Root-free guarded boundary comparator |
+| HIR | `prepare_hir` | Half-strip prepared solves and determinant; requires invertible outermost block and suitable roots |
+| HSC | `solve_hsc` | Half-strip all-rank determinant and nonsingular one-shot solve |
+| HSC-q0 | `solve_hsc_q0` | Reduced-precision HSC, guarded by invertibility of the outermost block |
+| HPR | `prepare_hpr` | Half-strip retained reconstruction, including singular outermost blocks; measured dense-terminal implementation |
+| Dense-LU | `prepare_dense_lu` | One reusable native physical LU, batched solves and determinant |
 
-`backend="flint"` selects compiled kernels; `backend="python"` selects the
-reference arithmetic. Substituting compiled dense kernels does **not** implement
-the paper's fast-exponent constructions. HIR determinant/transpose correspondence
-and HPR's general prepared-query theorem remain unproved; their successful finite
-checks are not general stability or complexity guarantees. CC-E/CC-E-R likewise
-retain the paper's measured-adapter scope. There is no implementation of the
-paper's general fast-exponent equality-test trees.
+Prepared objects expose `solve`, `solve_transpose`, `solve_many`, and
+`determinant` where documented. Use a context manager to release retained state.
+Use kernel contexts serially within one process. See the
+[input convention and Python example](docs/PRACTICAL.md#supply-the-matrix-without-expanding-it).
 
-## Matrix convention and example
+`backend="flint"` selects compiled kernels where supported. These replacements
+do not by themselves implement fast-exponent constructions. HIR's general
+determinant/transpose correspondence and HPR's general prepared-query theorem
+remain unproved; extension adapters retain their measured scope. The general
+fast-exponent equality-test trees are not implemented. The
+[solver guide](docs/SOLVERS.md) distinguishes executable behavior from guarantees.
 
-A matrix has `n` block rows and `n`-by-`n` Toeplitz blocks, so its physical order
-is `n*n`. Flatten a coordinate `(t, a)` as `t*n+a`.
+BFM-Strassen is `prepare_bfm(..., product="strassen", strassen_leaf=16)`.
+Dedicated-Strassen is `solve_dedicated(..., product="strassen", strassen_leaf=8)`.
+Both contain explicit recursion, with inspectable ledgers; see
+[examples](examples/README.md#explore-neighbouring-approaches).
 
-For a banded matrix of half-bandwidth `k`, provide `2*k+1` lag rows, each of length
-`2*n-1`, ordered from outer lag `-k` to `k`. Then
-
-```text
-T[t*n+a, u*n+b] = lags[t-u+k][n-1+a-b]
-```
-
-An out-of-range outer lag means zero. For a half-strip of width `w`, provide
-`n+w` rows, ordered from outer lag `-w` to `n-1`, and replace `k` by `w` in
-this formula. Entries and right-hand sides are residues modulo `p` (default
-`998244353`). No floating-point arithmetic is used.
-
-```python
-from bttb_solvers import prepare_cc_r
-from bttb_solvers.matrices import action
-
-n, k = 4, 1
-lags = [[0] * (2*n-1) for _ in range(2*k+1)]
-lags[k][n-1] = 2             # diagonal blocks: 2*identity
-lags[0][n-1] = 1             # one block superdiagonal
-b = list(range(n*n))
-with prepare_cc_r(lags, n, k) as solver:
-    x = solver.solve(b)
-    y = solver.solve_transpose(b)  # literal transpose, not adjoint
-    assert action(lags, n, k, x) == b
-    assert action(lags, n, k, y, transpose=True) == b
-```
-
-The other prepared APIs are `prepare_cc`, `prepare_cc_e`, `prepare_cc_e_r`,
-`prepare_bfm`, `prepare_hir`, `prepare_hpr`, `prepare_gbe` and
-`prepare_dense_lu`. Extension routes take explicit `field=` and `root=`;
-`extension_field(p, degree)` and `root_of_unity(field, n)` supply them separately.
-`solve_hsc(lags, n, w, rhs)` and `solve_hsc_q0(...)` return a dictionary with
-`determinant`, `solution` and `singular`. A transpose HSC solve reverses the
-right-hand side before solving and reverses the result afterwards, using the
-matrix's persymmetry.
-
-Use one process at a time for solver/kernel contexts. The reproduction driver
-is sequential; it uses fresh child processes to measure each observation and
-release native memory afterwards.
-
-## Reproduce the paper
-
-The `reproduce/` directory contains the fixed problem suite, runner, recorded
-paper values and table generator. It documents exactly what a rerun measures.
+## Regenerate measurements and tables
 
 ```bash
-python reproduce/run.py --small    # exactly the three smallest listed cases
-python reproduce/run.py --large    # the complete suite; can take a very long time
-python reproduce/tables.py --reference  # reconstruct printed values/tables from supplied records
+python reproduce/run.py --small       # exactly the three smallest cases
+python reproduce/run.py --large       # all cases; intentionally expensive
+python reproduce/tables.py --reference
 ```
 
-New timings depend on hardware and software; they need not equal the recorded
-paper timings. Every completed solve is checked by an exact residual outside
-its solver timer. The large suite is intentionally expensive and is not run
-as part of the quick tests.
+The [reproduction guide](reproduce/README.md) explains the fixed inputs,
+sequential fresh-process runner, exact checks and generated outputs. Fresh
+measurements depend on hardware and software. `--reference` renders the
+supplied recorded paper values; it does not rerun those timings.
+The [validation record](VALIDATION.md) describes completed checks and scope.
 
-## Layout and license
+## Repository map
 
-- `bttb_solvers/api.py`: public interfaces and input conventions.
-- `bttb_solvers/_internal/`: exact arithmetic, construction and query kernels.
-- `tests/`: small independent dense-reference, refusal and reuse checks.
-- `reproduce/`: inputs, measurements, tables and usage instructions.
+| Location | Contents |
+|---|---|
+| [bttb_solvers/api.py](bttb_solvers/api.py) | Public preparation and one-shot interfaces |
+| [bttb_solvers/matrices.py](bttb_solvers/matrices.py) | Raw matrix action, small dense representations and banded-to-half-strip conversion |
+| [bttb_solvers/_internal/](bttb_solvers/_internal/README.md) | Algorithm setup/query code and shared arithmetic; module roles documented in the code guide |
+| [examples/](examples/README.md) | User-input solving/comparison and research-kernel examples |
+| [reproduce/](reproduce/README.md) | Paper grids, measurements, recorded values and table generation |
+| [tests/](tests/test_solvers.py) | Independent dense-reference, domain, transpose and reuse checks |
 
 Copyright (C) 2026 Andrey Chesnokov. Licensed under **AGPL-3.0-or-later**;
-see [LICENSE](LICENSE). The circulant-correction construction is credited to
-Chesnokov and Van Barel as in the paper. Dependencies retain their own licenses.
+see [LICENSE](LICENSE). Dependencies retain their own licenses.
+Construction credits and implementation scope are in [REFERENCES](REFERENCES.md).
+Software citation metadata is supplied in [CITATION.cff](CITATION.cff).

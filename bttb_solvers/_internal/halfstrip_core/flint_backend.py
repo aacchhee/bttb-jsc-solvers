@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Shared. Context-local exact native polynomial, dot-product and update kernels; no whole-solver selection.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from contextlib import contextmanager
 from contextvars import ContextVar
 

@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Physical dense baseline.
+
+Role: Main. Owned native FLINT matrices, checked ABI binding, one physical LU, batched literal-transpose/forward solves and determinant extraction.
+
+Entry points: NativeAPI; OwnedMat; NativeLU.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 import ctypes as C
 import hashlib
 import json

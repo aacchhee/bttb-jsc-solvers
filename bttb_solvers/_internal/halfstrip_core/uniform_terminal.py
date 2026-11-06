@@ -1,5 +1,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Shared. Constant/polynomial matrix multiplication, explicit Strassen recursion, elimination leaves and recursive PM-Basis primitives.
+
+Explicit matrix recursion reference: Strassen (1969), DOI 10.1007/BF02165411.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip.approximant import _shape, _zeros, _trim
 from . import dense_backend
 from bttb_solvers._internal.halfstrip.allfield_poly import make_multiplier as _make_multiplier

@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""GBE boundary comparator.
+
+Role: Main/shared. Validate raw inputs, select width-one/general boundary preparation, retain transpose state and check query residuals.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from collections.abc import Mapping
 from contextlib import contextmanager
 from copy import deepcopy

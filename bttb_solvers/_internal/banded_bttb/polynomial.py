@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""CC Toeplitz, symbol and correction primitives.
+
+Role: Shared. Exact scalar-polynomial utilities, Euclidean operations, interpolation and product trees.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 def trim(F, a):
     end = len(a)
     while end and F.is_zero(a[end - 1]):

@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main CC setup and queries.
+
+Role: Shared. Native GF(p**d) field and polynomial contexts, coercions and guarded inverses for the supplied-extension CC adapters.
+
+Entry points: FqField; FqFieldNative.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from flint import fq_default_ctx, fq_default, fq_default_poly_ctx
 from bttb_solvers._internal.banded_bttb.field import Field, ELEMENTS_GUARD, is_prime
 from bttb_solvers._internal.banded_bttb.errors import ZeroDivisionInField

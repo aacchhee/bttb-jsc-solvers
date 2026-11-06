@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Shared. Fast local linear-algebra helpers used by carrier/defect calculations.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .uniform_terminal import (
     gauss_jordan, constant_determinant as determinant, _inverse, _power,
 )

@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial. Construct wide-band physical displacement generators directly from original Toeplitz lags and their reversed orientation.
+
+Entry points: WideGenerator; acquire.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from dataclasses import dataclass
 
 

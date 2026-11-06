@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Field setup and common representation tools.
+
+Role: Shared. Own scalar embeddings, guarded operations, algebra restrictions and descent for label-based source constructions.
+
+Entry points: OwnedLabelAlgebra.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.exact import EtaleField, Restart, pm, pgcd, pxgcd
 
 

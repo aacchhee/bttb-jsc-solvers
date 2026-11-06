@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Build forward and transpose carrier projections and their physical actions for the correction construction.
+
+Entry points: acquire_weighted_projections; ProjectedCarrier.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.dense_backend import metadata as dense_metadata
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import matrix_product
 from bttb_solvers._internal.spatial_transforms import row_product

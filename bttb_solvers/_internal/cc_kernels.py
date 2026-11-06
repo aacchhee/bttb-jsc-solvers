@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main CC setup and queries.
+
+Role: Shared. Scoped FLINT replacements for CC Toeplitz, transform, repair and correction kernels; restores the original functions on scope exit.
+
+Entry points: kernels.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 import itertools
 from contextlib import contextmanager
 

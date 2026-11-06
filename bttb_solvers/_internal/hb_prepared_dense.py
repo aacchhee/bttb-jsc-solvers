@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured CC comparison.
+
+Role: Trial/shared. Retain the dense inner PLU base for the structured CC comparison. This is not CC-R four-vector frequency preparation.
+
+Entry points: HBPreparedDense.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 class HBPreparedDense:
     def __init__(self, F, g, h, stats):
         self.F, self.g, self.h, self.stats = F, g, h, stats

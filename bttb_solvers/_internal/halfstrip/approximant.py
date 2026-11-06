@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Shared. Reference PM-Basis, shifted-degree and polynomial-matrix operations used by mosaic terminals.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 def _shape(A):
     if not A or not A[0] or not A[0][0]:
         raise ValueError("a nonempty polynomial coefficient matrix is required")

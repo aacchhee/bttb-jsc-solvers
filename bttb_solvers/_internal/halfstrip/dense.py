@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Shared. Exact dense LU of the small recurrence terminal, separate from the full physical dense reference.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.toeplitz import gauss_rank
 from bttb_solvers._internal.halfstrip_core.flint_backend import lu_update, enabled_prime, dot
 

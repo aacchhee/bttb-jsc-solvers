@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Polynomial column/image basis construction for the dedicated front end, with degree and reconstruction bookkeeping.
+
+Entry points: ColumnBasis.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_general_approximant import GeneralApproximant
 from bttb_solvers._internal.kn_polynomial import count
 

@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""CC Toeplitz, symbol and correction primitives.
+
+Role: Shared. Frequency symbols, direct/radix-two transforms, inverse-corner accumulation and circulant inverse application.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .errors import SymbolSingular
 from .field import int_element
 from .symbol import symbol_lag_at

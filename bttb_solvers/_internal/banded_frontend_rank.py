@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Guarded maximum-minor and coordinate-completion operations for polynomial-symbol rank acquisition.
+
+Entry points: certified_maximum_minor; narrow_raw_minor.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.kn_services import Services
 from bttb_solvers._internal.kn_krylov import row_rank_profile
 from bttb_solvers._internal.kn_polynomial import count

@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial/shared. Own the evolving array-based joint-defect state used by the structured half-strip construction.
+
+Entry points: JointState.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from copy import copy
 from bttb_solvers._internal.joint_arrays import SeriesOps, trim_factor
 from bttb_solvers._internal.rectangular_cauchy import RectangularCauchy

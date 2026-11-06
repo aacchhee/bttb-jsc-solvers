@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial/shared. Retain principal and paired source-history windows used by explicit structured readout.
+
+Entry points: PrincipalHistory; PairedHistories.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.joint_arrays import SeriesOps, trim_factor
 from bttb_solvers._internal.rectangular_cauchy import RectangularCauchy
 

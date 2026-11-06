@@ -1,0 +1,67 @@
+\begin{table}[p]
+\caption{Half-strip cells, det+solve.  (a)~$A_{-w}$ invertible: HIR CPU
+seconds at $R=1$, dense det+solve CPU (separate eliminations), and
+speedups of HIR and HSC-q0 for both references.  (b)~$A_{-w}$ of rank $n-1$,
+$w=2$: HPR speedups for both references.  Cells with $n\le32$ in (a) ran on
+host C; $n\ge48$ in (a) and $n\le128$ in (b) on host B; $n\ge160$ in (b)
+on host C.}
+
+\centering\small
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}{@{}rr|rr|rr|rr|rr@{}}
+\multicolumn{10}{@{}l}{(a) $A_{-w}$ invertible} \\
+\hline
+& & \multicolumn{2}{c|}{CPU, $R=1$} & \multicolumn{2}{c|}{HIR, $R=1$} & \multicolumn{2}{c|}{HIR, $R=4$} & \multicolumn{2}{c}{HSC-q0, $R=1$} \\
+$n$ & $w$ & HIR & dense & sep. & LU & sep. & LU & sep. & LU \\
+\hline
+
+$8$ & $1$ & \papernum{hs.n8.w1.r1.hir.cpu} & \papernum{hs.n8.w1.r1.dense.detsolve_cpu} & \papernum{hs.n8.w1.r1.hir.speedup_dense} & \papernum{hs.n8.w1.r1.hir.speedup_dense_lu} & \papernum{hs.n8.w1.r4.hir.speedup_dense} & \papernum{hs.n8.w1.r4.hir.speedup_dense_lu} & \papernum{hs.n8.w1.r1.hsc_q0.speedup_dense} & \papernum{hs.n8.w1.r1.hsc_q0.speedup_dense_lu} \\
+
+$16$ & $2$ & \papernum{hs.n16.w2.r1.hir.cpu} & \papernum{hs.n16.w2.r1.dense.detsolve_cpu} & \papernum{hs.n16.w2.r1.hir.speedup_dense} & \papernum{hs.n16.w2.r1.hir.speedup_dense_lu} & \papernum{hs.n16.w2.r4.hir.speedup_dense} & \papernum{hs.n16.w2.r4.hir.speedup_dense_lu} & \papernum{hs.n16.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n16.w2.r1.hsc_q0.speedup_dense_lu} \\
+
+$32$ & $2$ & \papernum{hs.n32.w2.r1.hir.cpu} & \papernum{hs.n32.w2.r1.dense.detsolve_cpu} & \papernum{hs.n32.w2.r1.hir.speedup_dense} & \papernum{hs.n32.w2.r1.hir.speedup_dense_lu} & \papernum{hs.n32.w2.r4.hir.speedup_dense} & \papernum{hs.n32.w2.r4.hir.speedup_dense_lu} & \papernum{hs.n32.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n32.w2.r1.hsc_q0.speedup_dense_lu} \\
+
+$48$ & $2$ & \papernum{hs.n48.w2.r1.hir.cpu} & \papernum{hs.n48.w2.r1.dense.detsolve_cpu} & \papernum{hs.n48.w2.r1.hir.speedup_dense} & \papernum{hs.n48.w2.r1.hir.speedup_dense_lu} & \papernum{hs.n48.w2.r4.hir.speedup_dense} & \papernum{hs.n48.w2.r4.hir.speedup_dense_lu} & \papernum{hs.n48.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n48.w2.r1.hsc_q0.speedup_dense_lu} \\
+
+$64$ & $2$ & \papernum{hs.n64.w2.r1.hir.cpu} & \papernum{hs.n64.w2.r1.dense.detsolve_cpu} & \papernum{hs.n64.w2.r1.hir.speedup_dense} & \papernum{hs.n64.w2.r1.hir.speedup_dense_lu} & \papernum{hs.n64.w2.r4.hir.speedup_dense} & \papernum{hs.n64.w2.r4.hir.speedup_dense_lu} & \papernum{hs.n64.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n64.w2.r1.hsc_q0.speedup_dense_lu} \\
+
+$64$ & $4$ & \papernum{hs.n64.w4.r1.hir.cpu} & \papernum{hs.n64.w4.r1.dense.detsolve_cpu} & \papernum{hs.n64.w4.r1.hir.speedup_dense} & \papernum{hs.n64.w4.r1.hir.speedup_dense_lu} & \papernum{hs.n64.w4.r4.hir.speedup_dense} & \papernum{hs.n64.w4.r4.hir.speedup_dense_lu} & \papernum{hs.n64.w4.r1.hsc_q0.speedup_dense} & \papernum{hs.n64.w4.r1.hsc_q0.speedup_dense_lu} \\
+
+$96$ & $2$ & \papernum{hs.n96.w2.r1.hir.cpu} & \papernum{hs.n96.w2.r1.dense.detsolve_cpu} & \papernum{hs.n96.w2.r1.hir.speedup_dense} & \papernum{hs.n96.w2.r1.hir.speedup_dense_lu} & \papernum{hs.n96.w2.r4.hir.speedup_dense} & \papernum{hs.n96.w2.r4.hir.speedup_dense_lu} & \papernum{hs.n96.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n96.w2.r1.hsc_q0.speedup_dense_lu} \\
+
+$128$ & $2$ & \papernum{hs.n128.w2.r1.hir.cpu} & \papernum{hs.n128.w2.r1.dense.detsolve_cpu} & \papernum{hs.n128.w2.r1.hir.speedup_dense} & \papernum{hs.n128.w2.r1.hir.speedup_dense_lu} & \papernum{hs.n128.w2.r4.hir.speedup_dense} & \papernum{hs.n128.w2.r4.hir.speedup_dense_lu} & \papernum{hs.n128.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n128.w2.r1.hsc_q0.speedup_dense_lu} \\
+
+$160$ & $2$ & \papernum{hs.n160.w2.r1.hir.cpu} & \papernum{hs.n160.w2.r1.dense.detsolve_cpu} & \papernum{hs.n160.w2.r1.hir.speedup_dense} & \papernum{hs.n160.w2.r1.hir.speedup_dense_lu} & --- & --- & \papernum{hs.n160.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n160.w2.r1.hsc_q0.speedup_dense_lu} \\
+
+$192$ & $2$ & \papernum{hs.n192.w2.r1.hir.cpu} & \papernum{hs.n192.w2.r1.dense.detsolve_cpu} & \papernum{hs.n192.w2.r1.hir.speedup_dense} & \papernum{hs.n192.w2.r1.hir.speedup_dense_lu} & --- & --- & \papernum{hs.n192.w2.r1.hsc_q0.speedup_dense} & \papernum{hs.n192.w2.r1.hsc_q0.speedup_dense_lu} \\
+\hline
+\end{tabular}}
+
+\medskip
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}{@{}rl|rrrr@{}}
+\multicolumn{6}{@{}l}{(b) $A_{-w}$ singular, HPR speedup} \\
+\hline
+$n$ & reference & $R=1$ & $R=4$ & $R=16$ & $R=64$ \\
+\hline
+
+$48$ & separate & \papernum{fh0.n48.w2.r1.hpr.speedup_dense} & \papernum{fh0.n48.w2.r4.hpr.speedup_dense} & \papernum{fh0.n48.w2.r16.hpr.speedup_dense} & --- \\
+ & one LU & \papernum{fh0.n48.w2.r1.hpr.speedup_dense_lu} & \papernum{fh0.n48.w2.r4.hpr.speedup_dense_lu} & \papernum{fh0.n48.w2.r16.hpr.speedup_dense_lu} & --- \\
+
+$64$ & separate & \papernum{fh0.n64.w2.r1.hpr.speedup_dense} & \papernum{fh0.n64.w2.r4.hpr.speedup_dense} & \papernum{fh0.n64.w2.r16.hpr.speedup_dense} & --- \\
+ & one LU & \papernum{fh0.n64.w2.r1.hpr.speedup_dense_lu} & \papernum{fh0.n64.w2.r4.hpr.speedup_dense_lu} & \papernum{fh0.n64.w2.r16.hpr.speedup_dense_lu} & --- \\
+
+$96$ & separate & \papernum{fh0.n96.w2.r1.hpr.speedup_dense} & \papernum{fh0.n96.w2.r4.hpr.speedup_dense} & \papernum{fh0.n96.w2.r16.hpr.speedup_dense} & --- \\
+ & one LU & \papernum{fh0.n96.w2.r1.hpr.speedup_dense_lu} & \papernum{fh0.n96.w2.r4.hpr.speedup_dense_lu} & \papernum{fh0.n96.w2.r16.hpr.speedup_dense_lu} & --- \\
+
+$128$ & separate & \papernum{fh0.n128.w2.r1.hpr.speedup_dense} & \papernum{fh0.n128.w2.r4.hpr.speedup_dense} & \papernum{fh0.n128.w2.r16.hpr.speedup_dense} & --- \\
+ & one LU & \papernum{fh0.n128.w2.r1.hpr.speedup_dense_lu} & \papernum{fh0.n128.w2.r4.hpr.speedup_dense_lu} & \papernum{fh0.n128.w2.r16.hpr.speedup_dense_lu} & --- \\
+
+$160$ & separate & \papernum{fh0.n160.w2.r1.hpr.speedup_dense} & \papernum{fh0.n160.w2.r4.hpr.speedup_dense} & \papernum{fh0.n160.w2.r16.hpr.speedup_dense} & \papernum{fh0.n160.w2.r64.hpr.speedup_dense} \\
+ & one LU & \papernum{fh0.n160.w2.r1.hpr.speedup_dense_lu} & \papernum{fh0.n160.w2.r4.hpr.speedup_dense_lu} & \papernum{fh0.n160.w2.r16.hpr.speedup_dense_lu} & \papernum{fh0.n160.w2.r64.hpr.speedup_dense_lu} \\
+
+$192$ & separate & \papernum{fh0.n192.w2.r1.hpr.speedup_dense} & \papernum{fh0.n192.w2.r4.hpr.speedup_dense} & \papernum{fh0.n192.w2.r16.hpr.speedup_dense} & \papernum{fh0.n192.w2.r64.hpr.speedup_dense} \\
+ & one LU & \papernum{fh0.n192.w2.r1.hpr.speedup_dense_lu} & \papernum{fh0.n192.w2.r4.hpr.speedup_dense_lu} & \papernum{fh0.n192.w2.r16.hpr.speedup_dense_lu} & \papernum{fh0.n192.w2.r64.hpr.speedup_dense_lu} \\
+\hline
+\end{tabular}}
+\end{table}

@@ -1,0 +1,36 @@
+\begin{table}[p]
+\caption{Measured choice and theory coverage by case.  ``Measured'' is the
+fastest executed structured route on the recorded fixtures, with the dense
+comparison against one LU; both references are tabulated in
+Tables~4, 7
+and~8.}
+
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}@{}}
+\hline
+Case & Measured choice & Theory coverage & Service \\
+\hline
+Prime-field CC domain, narrow $k$ &
+CC or CC-R by workload; dense at small $n$ (Section~5.2) &
+Theorem~3.2, Lemma~3.3 & solve-only \\
+Outside the prime-field domain (supplied $\F_{p^d}$), $k=1$; $k=2$, $R=1$ &
+BFM in every tested cell &
+Proposition~4.1 & solve-only \\
+Same, $k=2$, $R=4$; $k=4$ &
+CC-E or CC-E-R at $d=2$; HIR at $d=4$ &
+CC-E and CC-E-R measured only (Section~4.2); HIR (Section~4.3.2) & solve-only; HIR det+solve \\
+Nonsingular banded outside all other route domains &
+none measured in this exclusive domain &
+Proposition~4.1 & solve-only \\
+Half-strip, $A_{-w}$ invertible, $w=2$ &
+HIR fastest structured; dense at $n\le48$ &
+HIR (Section~4.3.2) & det+solve \\
+Half-strip, all-rank determinant or singular $A_{-w}$ &
+no measured optimum &
+HSC (Section~4.3.1), on (PM) & det+solve \\
+Half-strip, singular $A_{-w}$, $w=2$ &
+dense in every tested cell; HPR is dense-competitive only at $n=192$, $R=1$ &
+HPR, reuse open (Section~4.3.3); memory advantage & det+solve \\
+\hline
+\end{tabular}
+\end{table}

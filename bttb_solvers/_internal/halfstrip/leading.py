@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Shared. Compact one-level Toeplitz inverse of the leading block and its convolution applications.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.toeplitz import toeplitz_solve, toeplitz_dense, gauss_det
 from bttb_solvers._internal.banded_bttb.errors import SingularToeplitz
 

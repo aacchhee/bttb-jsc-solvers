@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial. Acquire a narrow raw polynomial symbol, chart and repaired front-end state; restrictions replay from the cached original lags.
+
+Entry points: RawNarrowFrontend; prepare_narrow_frontend.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.exact import Restart, pd
 from bttb_solvers._internal.label_algebra import setup_banded_label_algebra
 from bttb_solvers._internal.grouped_chart import _GroupedChartSearch

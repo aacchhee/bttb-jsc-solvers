@@ -1,0 +1,21 @@
+\begin{table}[p]
+\caption{CC-R at large $n$, solve-only CPU seconds (host C), with CC at
+$k=1$, $R=4$ and CC-R memory (GiB).  MEASURED; no dense reference.}
+
+\centering\small
+\begin{tabular}{@{}r|rrr|rr|rr|rr@{}}
+\hline
+& \multicolumn{3}{c|}{$k=1$} & \multicolumn{2}{c|}{$k=2$} & \multicolumn{2}{c|}{$k=4$} & \multicolumn{2}{c}{CC-R GiB, $R=1$} \\
+$n$ & $R=1$ & $R=4$ & CC $R=4$ & $R=1$ & $R=4$ & $R=1$ & $R=4$ & $k=1$ & $k=4$ \\
+\hline
+
+$448$ & \papernum{cc.n448.k1.r1.cc_r.cpu} & \papernum{cc.n448.k1.r4.cc_r.cpu} & \papernum{cc.n448.k1.r4.cc.cpu} & \papernum{cc.n448.k2.r1.cc_r.cpu} & \papernum{cc.n448.k2.r4.cc_r.cpu} & \papernum{cc.n448.k4.r1.cc_r.cpu} & \papernum{cc.n448.k4.r4.cc_r.cpu} & \papernum{cc.n448.k1.r1.cc_r.mem} & \papernum{cc.n448.k4.r1.cc_r.mem} \\
+
+$512$ & \papernum{cc.n512.k1.r1.cc_r.cpu} & \papernum{cc.n512.k1.r4.cc_r.cpu} & \papernum{cc.n512.k1.r4.cc.cpu} & \papernum{cc.n512.k2.r1.cc_r.cpu} & \papernum{cc.n512.k2.r4.cc_r.cpu} & \papernum{cc.n512.k4.r1.cc_r.cpu} & \papernum{cc.n512.k4.r4.cc_r.cpu} & \papernum{cc.n512.k1.r1.cc_r.mem} & \papernum{cc.n512.k4.r1.cc_r.mem} \\
+
+$896$ & \papernum{cc.n896.k1.r1.cc_r.cpu} & \papernum{cc.n896.k1.r4.cc_r.cpu} & \papernum{cc.n896.k1.r4.cc.cpu} & \papernum{cc.n896.k2.r1.cc_r.cpu} & \papernum{cc.n896.k2.r4.cc_r.cpu} & \papernum{cc.n896.k4.r1.cc_r.cpu} & \papernum{cc.n896.k4.r4.cc_r.cpu} & \papernum{cc.n896.k1.r1.cc_r.mem} & \papernum{cc.n896.k4.r1.cc_r.mem} \\
+
+$1024$ & \papernum{cc.n1024.k1.r1.cc_r.cpu} & \papernum{cc.n1024.k1.r4.cc_r.cpu} & \papernum{cc.n1024.k1.r4.cc.cpu} & \papernum{cc.n1024.k2.r1.cc_r.cpu} & \papernum{cc.n1024.k2.r4.cc_r.cpu} & \papernum{cc.n1024.k4.r1.cc_r.cpu} & \papernum{cc.n1024.k4.r4.cc_r.cpu} & \papernum{cc.n1024.k1.r1.cc_r.mem} & \papernum{cc.n1024.k4.r1.cc_r.mem} \\
+\hline
+\end{tabular}
+\end{table}

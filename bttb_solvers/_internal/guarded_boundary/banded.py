@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""GBE boundary comparator.
+
+Role: Main/shared. Retained-boundary elimination and queries for general outer half-bandwidth.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from collections.abc import Mapping
 from .boundary import zeros, normalize, matvec, transpose
 

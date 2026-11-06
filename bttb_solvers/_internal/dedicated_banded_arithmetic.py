@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial. Select classical or explicit Strassen dense operations around the complete dedicated physical solve; the classical many-pair service has a separate reuse contract.
+
+Entry points: solve_dedicated_banded; solve_dedicated_banded_many.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.dense_backend import dense_scope, metadata as dense_metadata
 from bttb_solvers._internal.banded_physical_solver import solve_banded as _solve_banded, SingularPhysicalMatrix
 
@@ -20,8 +28,8 @@ def solve_dedicated_banded(base,n,k,raw,forward_rhs,transpose_rhs,*,compress_gen
             error.statistics['dense_scope_ledger']=dict(ledger)
             raise
         result['metadata'].update(dense_metadata(),dense_scope='complete_raw_and_both_queries',
-            dedicated_backend_method=('reference_DEDICATED_CLASSICAL_DENSE' if dense_backend=='classical'
-                                      else 'reference_DEDICATED_STRASSEN_FIXED_LEAF_'+str(strassen_leaf)))
+            dedicated_backend_method=('Dedicated-classical' if dense_backend=='classical'
+                                      else 'Dedicated-Strassen'))
         result['statistics']['dense_scope_ledger']=dict(ledger)
         return result
 
@@ -74,6 +82,6 @@ def solve_dedicated_banded_many(base,n,k,raw,forward_rhs_list,transpose_rhs_list
             error.statistics['dense_scope_ledger']=dict(ledger)
             raise
         result['metadata'].update(dense_metadata(),dense_scope='complete_raw_and_all_batch_queries',
-            dedicated_backend_method='reference_DEDICATED_CLASSICAL_DENSE_BATCH')
+            dedicated_backend_method='Dedicated-classical')
         result['statistics']['dense_scope_ledger']=dict(ledger)
         return result

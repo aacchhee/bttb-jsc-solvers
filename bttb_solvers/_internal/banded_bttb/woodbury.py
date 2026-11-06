@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""CC Toeplitz, symbol and correction primitives.
+
+Role: Shared. Wrap/repair maps, reduced correction matrix construction, factorization and forward/transpose correction.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .errors import BandwidthOverlap, SingularInnerMatrix
 from .circulant import block_index_set
 from .toeplitz import zeros, mat_mul, identity

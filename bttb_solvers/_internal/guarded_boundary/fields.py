@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""GBE boundary comparator.
+
+Role: Main/shared. Attribute-style exact fields expected by the boundary recurrence.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from fractions import Fraction
 
 

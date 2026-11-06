@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""CC Toeplitz, symbol and correction primitives.
+
+Role: Shared. Typed CC field, root, parameter, repair and singularity refusals.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 class BandedBTTBError(Exception):
     """Root of every error this package raises."""
 

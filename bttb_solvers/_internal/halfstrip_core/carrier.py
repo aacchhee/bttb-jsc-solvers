@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Main/shared. Correct singular F0 by a controlled low-rank carrier and construct the required inverse-series data.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from . import poly as hp
 from .exact import (kernel, inverse, inverse_and_determinant, coefficient, transpose,
                       clean)

@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial/shared. Select active valuations and extract common factors/column quotients during joint compilation.
+
+Entry points: minimum_active; column_quotient; extract_common.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.joint import module_rows
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import _FieldOperations
 from bttb_solvers._internal.joint_arrays import SeriesOps, trim_factor

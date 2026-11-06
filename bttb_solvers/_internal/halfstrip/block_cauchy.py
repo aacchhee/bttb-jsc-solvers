@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Trial/shared. Block-Cauchy representation supporting alternate structured recurrence terminals.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.field import int_element
 from .block_levinson import add, matmul, zeros, solve_matrix, materialize
 from .dense import LU

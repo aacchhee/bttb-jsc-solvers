@@ -1,5 +1,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""BFM local-front implementation.
+
+Role: Main/shared. Local matrix products, classical/Strassen selection, rectangular blocking and native recursive seven-product squares.
+
+Explicit matrix recursion reference: Strassen (1969), DOI 10.1007/BF02165411.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from contextlib import contextmanager
 
 from bttb_solvers._internal.halfstrip_core import dense_backend

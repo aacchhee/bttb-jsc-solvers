@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""BFM local-front implementation.
+
+Role: Main/shared. Guarded row-profile selection and inverse maps for normalized boundary equations.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.guarded_boundary.boundary import RankFailure
 
 from .kernel import matmul, add_matrix, sub_matrix, neg_matrix

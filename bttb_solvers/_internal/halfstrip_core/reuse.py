@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Main/shared. HPR preparation, restart ownership and LU/division/appended queries; also HSC oneshot_solve and deterministic fixture helpers.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 import hashlib
 import time
 from operator import mul as _mul

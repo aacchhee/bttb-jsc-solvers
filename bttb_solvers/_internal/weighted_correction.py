@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Assemble and expose the weighted wrap/repair correction and its generator-compatible maps.
+
+Entry points: WeightedCorrection; acquire_weighted_correction.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core import uniform_terminal as uniform
 
 

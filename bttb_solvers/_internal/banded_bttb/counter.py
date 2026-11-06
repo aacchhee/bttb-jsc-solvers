@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""CC Toeplitz, symbol and correction primitives.
+
+Role: Shared. Reference-operation and stage counters; compiled kernels do not invent equivalent scalar counts.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from contextlib import contextmanager
 from fractions import Fraction
 

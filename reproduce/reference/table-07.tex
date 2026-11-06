@@ -1,0 +1,55 @@
+\begin{table}[p]
+\caption{First-measurement series fastest compiled route in the \papernum{ext.cells}
+extension-field cells: CPU seconds, memory (GiB) and speedup over dense for
+both references; the one-LU reruns reverse the choice between CC-E
+and CC-E-R at $n=96,192$, $k=4$, $R=1$ (see text).  Solve-only
+except HIR$^{\dagger}$ (det+solve against dense det+solve).  $^{\ast}$\,CROSS-BLOCK:
+separate-elimination reference from the $R=1$ run; the one-LU measurement series
+measures these cells itself.}
+
+\centering\small
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}{@{}rrrrl|rr|rr@{}}
+\hline
+& & & & & & & \multicolumn{2}{c}{speedup} \\
+$n$ & $d$ & $k$ & $R$ & route & CPU & GiB & sep. & LU \\
+\hline
+
+$96$ & $2$ & $1$ & $1$ & BFM & \papernum{ext.n96.k1.r1.bfm.cpu} & \papernum{ext.n96.k1.r1.bfm.mem} & \papernum{ext.n96.k1.r1.bfm.speedup_dense} & \papernum{ext.n96.k1.r1.bfm.speedup_dense_lu} \\
+
+$96$ & $2$ & $1$ & $4$ & BFM & \papernum{ext.n96.k1.r4.bfm.cpu} & \papernum{ext.n96.k1.r4.bfm.mem} & \papernum{ext.n96.k1.r4.bfm.speedup_dense} & \papernum{ext.n96.k1.r4.bfm.speedup_dense_lu} \\
+
+$96$ & $2$ & $2$ & $1$ & BFM & \papernum{ext.n96.k2.r1.bfm.cpu} & \papernum{ext.n96.k2.r1.bfm.mem} & \papernum{ext.n96.k2.r1.bfm.speedup_dense} & \papernum{ext.n96.k2.r1.bfm.speedup_dense_lu} \\
+
+$96$ & $2$ & $2$ & $4$ & CC-E-R & \papernum{ext.n96.k2.r4.cc_e_r.cpu} & \papernum{ext.n96.k2.r4.cc_e_r.mem} & \papernum{ext.n96.k2.r4.cc_e_r.speedup_dense} & \papernum{ext.n96.k2.r4.cc_e_r.speedup_dense_lu} \\
+
+$96$ & $2$ & $4$ & $1$ & CC-E-R & \papernum{ext.n96.k4.r1.cc_e_r.cpu} & \papernum{ext.n96.k4.r1.cc_e_r.mem} & \papernum{ext.n96.k4.r1.cc_e_r.speedup_dense} & \papernum{ext.n96.k4.r1.cc_e_r.speedup_dense_lu} \\
+
+$96$ & $2$ & $4$ & $4$ & CC-E-R & \papernum{ext.n96.k4.r4.cc_e_r.cpu} & \papernum{ext.n96.k4.r4.cc_e_r.mem} & \papernum{ext.n96.k4.r4.cc_e_r.speedup_dense} & \papernum{ext.n96.k4.r4.cc_e_r.speedup_dense_lu} \\
+
+$160$ & $4$ & $1$ & $1$ & BFM & \papernum{ext.n160.k1.r1.bfm.cpu} & \papernum{ext.n160.k1.r1.bfm.mem} & \papernum{ext.n160.k1.r1.bfm.speedup_dense} & \papernum{ext.n160.k1.r1.bfm.speedup_dense_lu} \\
+
+$160$ & $4$ & $1$ & $4$ & BFM & \papernum{ext.n160.k1.r4.bfm.cpu} & \papernum{ext.n160.k1.r4.bfm.mem} & \papernum{ext.n160.k1.r4.bfm.speedup_dense}$^{\ast}$ & \papernum{ext.n160.k1.r4.bfm.speedup_dense_lu} \\
+
+$160$ & $4$ & $2$ & $1$ & BFM & \papernum{ext.n160.k2.r1.bfm.cpu} & \papernum{ext.n160.k2.r1.bfm.mem} & \papernum{ext.n160.k2.r1.bfm.speedup_dense} & \papernum{ext.n160.k2.r1.bfm.speedup_dense_lu} \\
+
+$160$ & $4$ & $2$ & $4$ & HIR$^{\dagger}$ & \papernum{ext.n160.k2.r4.hir.cpu} & \papernum{ext.n160.k2.r4.hir.mem} & \papernum{ext.n160.k2.r4.hir.speedup_dense}$^{\ast}$ & \papernum{ext.n160.k2.r4.hir.speedup_dense_lu} \\
+
+$160$ & $4$ & $4$ & $1$ & HIR$^{\dagger}$ & \papernum{ext.n160.k4.r1.hir.cpu} & \papernum{ext.n160.k4.r1.hir.mem} & \papernum{ext.n160.k4.r1.hir.speedup_dense} & \papernum{ext.n160.k4.r1.hir.speedup_dense_lu} \\
+
+$160$ & $4$ & $4$ & $4$ & HIR$^{\dagger}$ & \papernum{ext.n160.k4.r4.hir.cpu} & \papernum{ext.n160.k4.r4.hir.mem} & \papernum{ext.n160.k4.r4.hir.speedup_dense}$^{\ast}$ & \papernum{ext.n160.k4.r4.hir.speedup_dense_lu} \\
+
+$192$ & $2$ & $1$ & $1$ & BFM & \papernum{ext.n192.k1.r1.bfm.cpu} & \papernum{ext.n192.k1.r1.bfm.mem} & \papernum{ext.n192.k1.r1.bfm.speedup_dense} & \papernum{ext.n192.k1.r1.bfm.speedup_dense_lu} \\
+
+$192$ & $2$ & $1$ & $4$ & BFM & \papernum{ext.n192.k1.r4.bfm.cpu} & \papernum{ext.n192.k1.r4.bfm.mem} & \papernum{ext.n192.k1.r4.bfm.speedup_dense}$^{\ast}$ & \papernum{ext.n192.k1.r4.bfm.speedup_dense_lu} \\
+
+$192$ & $2$ & $2$ & $1$ & BFM & \papernum{ext.n192.k2.r1.bfm.cpu} & \papernum{ext.n192.k2.r1.bfm.mem} & \papernum{ext.n192.k2.r1.bfm.speedup_dense} & \papernum{ext.n192.k2.r1.bfm.speedup_dense_lu} \\
+
+$192$ & $2$ & $2$ & $4$ & CC-E-R & \papernum{ext.n192.k2.r4.cc_e_r.cpu} & \papernum{ext.n192.k2.r4.cc_e_r.mem} & \papernum{ext.n192.k2.r4.cc_e_r.speedup_dense}$^{\ast}$ & \papernum{ext.n192.k2.r4.cc_e_r.speedup_dense_lu} \\
+
+$192$ & $2$ & $4$ & $1$ & CC-E & \papernum{ext.n192.k4.r1.cc_e.cpu} & \papernum{ext.n192.k4.r1.cc_e.mem} & \papernum{ext.n192.k4.r1.cc_e.speedup_dense} & \papernum{ext.n192.k4.r1.cc_e.speedup_dense_lu} \\
+
+$192$ & $2$ & $4$ & $4$ & CC-E-R & \papernum{ext.n192.k4.r4.cc_e_r.cpu} & \papernum{ext.n192.k4.r4.cc_e_r.mem} & \papernum{ext.n192.k4.r4.cc_e_r.speedup_dense}$^{\ast}$ & \papernum{ext.n192.k4.r4.cc_e_r.speedup_dense_lu} \\
+\hline
+\end{tabular}}
+\end{table}

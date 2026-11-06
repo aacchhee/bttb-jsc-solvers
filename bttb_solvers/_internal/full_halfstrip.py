@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Mixed. Trial structured half-strip solve with explicit source histories and whole-attempt restart/descent; its input/restriction helpers are also shared by HSC-q0.
+
+Entry points: solve_full; _input; _retained_factor.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.exact import Restart, pd
 from bttb_solvers._internal.halfstrip_core.dense_backend import metadata
 from bttb_solvers._internal.label_algebra import setup_label_algebra

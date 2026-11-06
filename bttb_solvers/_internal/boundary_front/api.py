@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""BFM local-front implementation.
+
+Role: Main/shared. BFM preparation, prepared queries and statistics. Raw
+Toeplitz transpose queries reuse the core through reversal; arbitrary dense
+blocks use a lazy second transposed core.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from collections.abc import Mapping
 from contextlib import contextmanager
 from time import perf_counter, process_time
@@ -188,7 +196,7 @@ class _Base:
         return report
 
 
-class Ex1159Prepared(_Base):
+class BoundaryFrontPrepared(_Base):
     """Raw Toeplitz lags: B[i*n+a, j*n+b] = lags[i-j][a-b+n-1], |i-j| <= k.
 
     solve_transpose uses T^t = J T J (physical reversal of all m*n coordinates)
@@ -237,7 +245,7 @@ class Ex1159Prepared(_Base):
         return x
 
 
-class Ex1159BlocksPrepared(_Base):
+class BoundaryFrontBlocksPrepared(_Base):
     """Arbitrary repeated dense blocks; the transpose is a literal second
     preparation from A'_j = A_-j^t, paid again and built lazily."""
     def __init__(self, base, blocks, block_count, k, **options):
@@ -272,8 +280,8 @@ class Ex1159BlocksPrepared(_Base):
 
 def prepare_bfm(base, lags, block_count, **options):
     """Raw Toeplitz lag mapping/sequence (k inferred as in guarded_boundary.unified)."""
-    return Ex1159Prepared(base, lags, block_count, **options)
+    return BoundaryFrontPrepared(base, lags, block_count, **options)
 
 
 def prepare_bfm_blocks(base, blocks, block_count, k, **options):
-    return Ex1159BlocksPrepared(base, blocks, block_count, k, **options)
+    return BoundaryFrontBlocksPrepared(base, blocks, block_count, k, **options)

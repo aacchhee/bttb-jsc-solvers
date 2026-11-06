@@ -1,5 +1,15 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""KN supplied-generator algebra.
+
+Role: Trial. Khichane-Neiger-style supplied-generator solve/nullspace service: paid dense base and three approximation/reconstruction phases. Raw physical acquisition is external.
+
+Entry points: Services.solve_stein; Services.solve_scalar.
+
+References: Khichane and Neiger (2026); see REFERENCES.md for the precise
+approximant/kernel sources and preprint scope.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core import uniform_terminal as uniform
 from bttb_solvers._internal.halfstrip_core.dense_backend import terminal_method, selection
 from bttb_solvers._internal.kn_approximant import Approximant

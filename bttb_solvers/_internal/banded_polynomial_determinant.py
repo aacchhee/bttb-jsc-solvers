@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Polynomial-symbol determinant acquisition from a certified maximum minor; signals the nonsingular determinant branch.
+
+Entry points: determinant_from_maximum_minor; NonsingularDeterminant.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core import uniform_terminal as uniform
 from bttb_solvers._internal.banded_column_basis import ColumnBasis
 from bttb_solvers._internal.banded_frontend_rank import coordinate_completion

@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""CC Toeplitz, symbol and correction primitives.
+
+Role: Shared. Explicit prime/extension coordinate fields, guarded arithmetic, size/order and supplied-root helpers.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .errors import (NotAPrimePower, ZeroDivisionInField,
                      CharacteristicDividesOrder, NoRootOfUnity, NeedsGenerator)
 

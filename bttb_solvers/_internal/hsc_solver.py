@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR construction.
+
+Role: Main. Raw-lag classical source adapter with precision selection and guarded algebra restart; used by the public HSC-q0 route. Public HSC uses oneshot_solve in halfstrip_core/reuse.py.
+
+Entry points: solve_hsc; _attempt.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.exact import Restart
 from bttb_solvers._internal.halfstrip_core.solver import solve as _solve_original
 from bttb_solvers._internal.label_algebra import setup_label_algebra

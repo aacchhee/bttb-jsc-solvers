@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured CC comparison.
+
+Role: Trial. Acquire the supplied-root structured CC front end, symbol rank/determinant, valid parameter and coordinate context. This is distinct from cc_prepared.py.
+
+Entry points: prepare_hb_frontend.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.field import PrimeField, ExtensionField
 from bttb_solvers._internal.banded_bttb.polynomial import ProductTree
 from bttb_solvers._internal.native_field_view import NativeBaseFieldView
@@ -11,14 +19,14 @@ from bttb_solvers._internal.fast_scalar import FastScalar
 from bttb_solvers._internal.halfstrip_core.dense_backend import selection, metadata as dense_metadata
 
 
-METHOD='HB1150_SUPPLIED_ROOT_MU_STRASSEN'
+METHOD='STRUCTURED_CC_SUPPLIED_ROOT_MU_STRASSEN'
 
 
 def _method():
     backend,leaf=selection()
     if (backend,leaf)==('strassen',1):return METHOD
-    if backend=='classical':return 'HB1150_SUPPLIED_ROOT_MU_CLASSICAL_DENSE'
-    return 'HB1150_SUPPLIED_ROOT_MU_'+backend.upper()+'_LEAF_'+str(leaf)
+    if backend=='classical':return 'STRUCTURED_CC_SUPPLIED_ROOT_MU_CLASSICAL_DENSE'
+    return 'STRUCTURED_CC_SUPPLIED_ROOT_MU_'+backend.upper()+'_LEAF_'+str(leaf)
 
 
 def _power(F,value,exponent):

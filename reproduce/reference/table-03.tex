@@ -1,0 +1,33 @@
+\begin{table}[p]
+\caption{CC-R speedups over dense, solve-only, host C, $n\in\{16,32,64\}$.
+``sep.'': separate eliminations (MEASURED medians, DERIVED ratio); ``LU'':
+one LU (MEASURED medians, DERIVED ratio).  At $n=16$, $k=8$ violates $2k<n$.}
+
+\centering\small
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}{@{}rr|rr|rr|rr|rr@{}}
+\hline
+& & \multicolumn{2}{c|}{$k=1$} & \multicolumn{2}{c|}{$k=2$} & \multicolumn{2}{c|}{$k=4$} & \multicolumn{2}{c}{$k=8$} \\
+$n$ & $R$ & sep. & LU & sep. & LU & sep. & LU & sep. & LU \\
+\hline
+
+$16$ & $1$ & \papernum{cc.n16.k1.r1.cc_r.speedup_dense} & \papernum{cc.n16.k1.r1.cc_r.speedup_dense_lu} & \papernum{cc.n16.k2.r1.cc_r.speedup_dense} & \papernum{cc.n16.k2.r1.cc_r.speedup_dense_lu} & \papernum{cc.n16.k4.r1.cc_r.speedup_dense} & \papernum{cc.n16.k4.r1.cc_r.speedup_dense_lu} & --- & --- \\
+
+$16$ & $4$ & \papernum{cc.n16.k1.r4.cc_r.speedup_dense} & \papernum{cc.n16.k1.r4.cc_r.speedup_dense_lu} & \papernum{cc.n16.k2.r4.cc_r.speedup_dense} & \papernum{cc.n16.k2.r4.cc_r.speedup_dense_lu} & \papernum{cc.n16.k4.r4.cc_r.speedup_dense} & \papernum{cc.n16.k4.r4.cc_r.speedup_dense_lu} & --- & --- \\
+
+$16$ & $16$ & \papernum{cc.n16.k1.r16.cc_r.speedup_dense} & \papernum{cc.n16.k1.r16.cc_r.speedup_dense_lu} & \papernum{cc.n16.k2.r16.cc_r.speedup_dense} & \papernum{cc.n16.k2.r16.cc_r.speedup_dense_lu} & \papernum{cc.n16.k4.r16.cc_r.speedup_dense} & \papernum{cc.n16.k4.r16.cc_r.speedup_dense_lu} & --- & --- \\
+
+$32$ & $1$ & \papernum{cc.n32.k1.r1.cc_r.speedup_dense} & \papernum{cc.n32.k1.r1.cc_r.speedup_dense_lu} & \papernum{cc.n32.k2.r1.cc_r.speedup_dense} & \papernum{cc.n32.k2.r1.cc_r.speedup_dense_lu} & \papernum{cc.n32.k4.r1.cc_r.speedup_dense} & \papernum{cc.n32.k4.r1.cc_r.speedup_dense_lu} & \papernum{cc.n32.k8.r1.cc_r.speedup_dense} & \papernum{cc.n32.k8.r1.cc_r.speedup_dense_lu} \\
+
+$32$ & $4$ & \papernum{cc.n32.k1.r4.cc_r.speedup_dense} & \papernum{cc.n32.k1.r4.cc_r.speedup_dense_lu} & \papernum{cc.n32.k2.r4.cc_r.speedup_dense} & \papernum{cc.n32.k2.r4.cc_r.speedup_dense_lu} & \papernum{cc.n32.k4.r4.cc_r.speedup_dense} & \papernum{cc.n32.k4.r4.cc_r.speedup_dense_lu} & \papernum{cc.n32.k8.r4.cc_r.speedup_dense} & \papernum{cc.n32.k8.r4.cc_r.speedup_dense_lu} \\
+
+$32$ & $16$ & \papernum{cc.n32.k1.r16.cc_r.speedup_dense} & \papernum{cc.n32.k1.r16.cc_r.speedup_dense_lu} & \papernum{cc.n32.k2.r16.cc_r.speedup_dense} & \papernum{cc.n32.k2.r16.cc_r.speedup_dense_lu} & \papernum{cc.n32.k4.r16.cc_r.speedup_dense} & \papernum{cc.n32.k4.r16.cc_r.speedup_dense_lu} & \papernum{cc.n32.k8.r16.cc_r.speedup_dense} & \papernum{cc.n32.k8.r16.cc_r.speedup_dense_lu} \\
+
+$64$ & $1$ & \papernum{cc.n64.k1.r1.cc_r.speedup_dense} & \papernum{cc.n64.k1.r1.cc_r.speedup_dense_lu} & \papernum{cc.n64.k2.r1.cc_r.speedup_dense} & \papernum{cc.n64.k2.r1.cc_r.speedup_dense_lu} & \papernum{cc.n64.k4.r1.cc_r.speedup_dense} & \papernum{cc.n64.k4.r1.cc_r.speedup_dense_lu} & \papernum{cc.n64.k8.r1.cc_r.speedup_dense} & \papernum{cc.n64.k8.r1.cc_r.speedup_dense_lu} \\
+
+$64$ & $4$ & \papernum{cc.n64.k1.r4.cc_r.speedup_dense} & \papernum{cc.n64.k1.r4.cc_r.speedup_dense_lu} & \papernum{cc.n64.k2.r4.cc_r.speedup_dense} & \papernum{cc.n64.k2.r4.cc_r.speedup_dense_lu} & \papernum{cc.n64.k4.r4.cc_r.speedup_dense} & \papernum{cc.n64.k4.r4.cc_r.speedup_dense_lu} & \papernum{cc.n64.k8.r4.cc_r.speedup_dense} & \papernum{cc.n64.k8.r4.cc_r.speedup_dense_lu} \\
+
+$64$ & $16$ & \papernum{cc.n64.k1.r16.cc_r.speedup_dense} & \papernum{cc.n64.k1.r16.cc_r.speedup_dense_lu} & \papernum{cc.n64.k2.r16.cc_r.speedup_dense} & \papernum{cc.n64.k2.r16.cc_r.speedup_dense_lu} & \papernum{cc.n64.k4.r16.cc_r.speedup_dense} & \papernum{cc.n64.k4.r16.cc_r.speedup_dense_lu} & \papernum{cc.n64.k8.r16.cc_r.speedup_dense} & \papernum{cc.n64.k8.r16.cc_r.speedup_dense_lu} \\
+\hline
+\end{tabular}}
+\end{table}

@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial/shared. Materialize requested physical/principal blocks from the explicit joint state when the construction pays for them.
+
+Entry points: materialize_physical; whole_principal_block.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.cauchy_transforms import CauchyCatalog
 from bttb_solvers._internal.compact_cauchy import CompactCauchy
 from bttb_solvers._internal.constant_profile import rank_profile_kernel

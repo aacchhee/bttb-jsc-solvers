@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Shared. Acquire/restrict an effective working algebra, embed original coefficients, supply labels and descend results.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .exact import base_factory, irreducible_modulus, EtaleField
 
 def raw_scalar(F,name,x):

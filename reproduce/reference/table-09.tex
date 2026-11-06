@@ -1,0 +1,26 @@
+\begin{table}[p]
+\caption{Prepared-query bounds (square case $m=n$).  ``Prep.''\ is one
+preparation, ``Query'' one further forward or literal transpose solve on a
+nonsingular input.  The last row is not a theorem of this paper.}
+
+\centering
+\small
+\begin{tabular}{@{}llllp{3.6cm}@{}}
+\hline
+Result & Input & Prep. & Query & Status \\
+\hline
+
+pivot-volume determinant & BTTB & $\softO(n^{\tau+1})$, with $\det T$ & $\softO(n^3)$ & \raggedright proved on (PM); any field, fixed $\tau\in(2,3)$ of a supplied product family \tabularnewline
+
+GBE & BB & $O(kn^2+k^3n^3\log n)$ & $O(k^2n^3)$ & \raggedright proved; every field \tabularnewline
+
+BFM, Prop.~4.1 & BB & $O(kn^2+(kn)^\sigma\log n)$ & $O(k^2n^\sigma)$ & \raggedright proved; every field; implemented and timed \tabularnewline
+
+CC, Thm.~3.2 & HB & $O(k^3n^3)$ & $O(n^3+k^2n^2)$ & \raggedright proved; field and root as in Def.~3.1 \tabularnewline
+
+CC-R, Lem.~3.3 & HB & CC setup $+\,O(n^3)$ & $\softO(n^2+k^2n^2)$ & \raggedright proved; needs a length-$n$ DFT in $O(\mathsf M(n))$ \tabularnewline
+
+HPR & HS & $\softO(wn^3)$, with $\det T$ & $\softO(n^3)$ & \raggedright \textbf{open} \tabularnewline
+\hline
+\end{tabular}
+\end{table}

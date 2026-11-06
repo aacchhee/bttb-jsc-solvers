@@ -1,0 +1,7632 @@
+[
+  {
+    "family": "banded",
+    "n": 4,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CK-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip-uniform-terminal",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip-uniform-terminal",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip-CK-terminal",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip-CK-terminal",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n4-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 8,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CK-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip-uniform-terminal",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip-uniform-terminal",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip-CK-terminal",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip-CK-terminal",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n8-w1-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 8,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n8-w1-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 8,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n8-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip-uniform-terminal",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CK-halfstrip-uniform-terminal",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Structured-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip-CK-terminal",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Uniform-halfstrip-CK-terminal",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w1-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 16,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n16-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w1-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 16,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n16-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 1,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w1-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 16,
+    "width": 1,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n16-w1-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 16,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n16-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 16,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n16-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 16,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n16-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 16,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n16-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w2-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 16,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n16-w2-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 4,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w4-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 8,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w8-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 8,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w8-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 16,
+    "width": 8,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n16-w8-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 24,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n24-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 24,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n24-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 24,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n24-w2-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 24,
+    "width": 8,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n24-w8-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 1,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w1-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 32,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n32-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 32,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n32-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 32,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n32-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 32,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n32-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w2-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 32,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n32-w2-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 4,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w4-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 8,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w8-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 32,
+    "width": 8,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n32-w8-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 8,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w8-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 32,
+    "width": 8,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n32-w8-r16-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 48,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n48-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 48,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n48-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 48,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n48-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 48,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n48-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 48,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n48-w2-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 48,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n48-w4-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 48,
+    "width": 8,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-appended",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR-division",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n48-w8-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dedicated-classical",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 1,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w1-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 64,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n64-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 64,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n64-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 64,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n64-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 64,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n64-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w2-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 64,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n64-w2-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w4-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 64,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n64-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w4-r4-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 64,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n64-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 4,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w4-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 8,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w8-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 8,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w8-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 64,
+    "width": 8,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "BFM-Strassen",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n64-w8-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 96,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n96-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 96,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n96-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 96,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n96-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 96,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n96-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 96,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n96-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 96,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n96-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 96,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n96-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 96,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n96-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 96,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n96-w2-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 96,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n96-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 96,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "GBE",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n96-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 112,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n112-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 112,
+    "width": 1,
+    "pairs": 2,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n112-w1-r2-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 1,
+    "pairs": 2,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w1-r2-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 128,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n128-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 128,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n128-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 128,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n128-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 128,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n128-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 128,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n128-w2-r16-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 8,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w8-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 8,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w8-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 16,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w16-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 16,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w16-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 32,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w32-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 32,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w32-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 48,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w48-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 48,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w48-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 63,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w63-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 128,
+    "width": 63,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n128-w63-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 160,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n160-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 160,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n160-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 160,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n160-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 160,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n160-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 160,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n160-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 160,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n160-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 160,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n160-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 160,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n160-w2-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 160,
+    "width": 2,
+    "pairs": 64,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n160-w2-r64-s0"
+  },
+  {
+    "family": "banded",
+    "n": 160,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n160-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 160,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n160-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 192,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n192-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 192,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n192-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 192,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n192-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-h0",
+    "n": 192,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC-q0",
+        "backend": "python",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-h0-n192-w2-r1-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 192,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HSC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n192-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 192,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n192-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 192,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n192-w2-r4-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 192,
+    "width": 2,
+    "pairs": 16,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n192-w2-r16-s0"
+  },
+  {
+    "family": "halfstrip-rank-deficient",
+    "n": 192,
+    "width": 2,
+    "pairs": 64,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 512
+      },
+      {
+        "algorithm": "HPR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "halfstrip-rank-deficient-n192-w2-r64-s0"
+  },
+  {
+    "family": "banded",
+    "n": 192,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n192-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 192,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-E-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n192-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 224,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n224-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 224,
+    "width": 1,
+    "pairs": 2,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n224-w1-r2-s0"
+  },
+  {
+    "family": "banded",
+    "n": 224,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n224-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 224,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "BFM",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "HIR",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n224-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 256,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n256-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 256,
+    "width": 1,
+    "pairs": 2,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "python",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "Dense-LU",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n256-w1-r2-s0"
+  },
+  {
+    "family": "banded",
+    "n": 448,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n448-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 448,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n448-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 448,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n448-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 448,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n448-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 448,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n448-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 448,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n448-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 512,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n512-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 512,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n512-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 512,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n512-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 512,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n512-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 512,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n512-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 512,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n512-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 896,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n896-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 896,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n896-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 896,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n896-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 896,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n896-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 896,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n896-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 896,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n896-w4-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 1024,
+    "width": 1,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n1024-w1-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 1024,
+    "width": 1,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n1024-w1-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 1024,
+    "width": 2,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n1024-w2-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 1024,
+    "width": 2,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n1024-w2-r4-s0"
+  },
+  {
+    "family": "banded",
+    "n": 1024,
+    "width": 4,
+    "pairs": 1,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n1024-w4-r1-s0"
+  },
+  {
+    "family": "banded",
+    "n": 1024,
+    "width": 4,
+    "pairs": 4,
+    "seed": 0,
+    "methods": [
+      {
+        "algorithm": "CC",
+        "backend": "flint",
+        "native_product_cap": 4096
+      },
+      {
+        "algorithm": "CC-R",
+        "backend": "flint",
+        "native_product_cap": 4096
+      }
+    ],
+    "case": "banded-n1024-w4-r4-s0"
+  }
+]

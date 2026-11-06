@@ -1,5 +1,12 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Shared. Cantor-Kaltofen cyclotomic-quotient scalar multiplication alternative; fixed leaves and explicit recursion statistics.
+
+Reference: Cantor and Kaltofen (1991), DOI 10.1007/BF01178683.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 LEAF_CUTOFF = 64
 QUOTIENT_LEAF_EXPONENT = 2
 

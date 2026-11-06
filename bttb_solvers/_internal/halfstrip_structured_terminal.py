@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Alternative HIR terminals.
+
+Role: Trial/shared. Alternative terminal representations and causal solves for recurrence-based half-strips; these are separate from the public HIR dense-terminal default.
+
+Entry points: StructuredTerminal; DenseImpulseTerminal.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from contextlib import contextmanager
 import time
 from bttb_solvers._internal.halfstrip_core.dense_backend import dense_scope

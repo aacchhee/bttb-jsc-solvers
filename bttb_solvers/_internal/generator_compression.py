@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Two-pass exact rank-factor compression of acquired displacement generators; preserves the represented matrix and records paid work.
+
+Entry points: compress_generators; CompressedGenerators.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from dataclasses import dataclass
 from types import SimpleNamespace
 from bttb_solvers._internal.halfstrip_core import uniform_terminal as uniform

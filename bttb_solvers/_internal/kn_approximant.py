@@ -1,5 +1,15 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""KN supplied-generator algebra.
+
+Role: Trial/shared. Canonical/known-degree approximant, vector approximation and simultaneous Hermite-Pade routines for the supplied-generator construction.
+
+Entry points: Approximant.
+
+References: Khichane and Neiger (2026); see REFERENCES.md for the precise
+approximant/kernel sources and preprint scope.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from heapq import heappush, heappop
 from bttb_solvers._internal.kn_polynomial import count
 from bttb_solvers._internal.kn_kernel import Kernel

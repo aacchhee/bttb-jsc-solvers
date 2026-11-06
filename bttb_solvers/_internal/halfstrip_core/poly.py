@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Shared. Sparse/dense polynomial-matrix products, coefficient windows and series inversion with exact scalar backends.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip.allfield_poly import make_multiplier, NATIVE_ACCELERATOR_MAX
 from .flint_backend import enabled_prime, product as flint_product, selection as kernel_selection, record as kernel_record
 

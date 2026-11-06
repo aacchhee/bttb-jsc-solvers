@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HSC and HPR series/mosaic implementation.
+
+Role: Main/shared. Main HSC carrier-to-terminal orchestration, determinant scaling, physical reconstruction and working-algebra descent.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .exact import EtaleField, Restart, power
 from .field_setup import setup_field, setup_effective_field, raw_scalar, descend
 from .carrier import carrier

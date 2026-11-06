@@ -179,14 +179,14 @@ def prepare_cc_e_r(lags, n, k, *, field, root, backend='flint'):
     return _prepare_cc(lags,n,k,p=field.p,root=root,backend=backend,retained=True,field=field)
 
 
-def prepare_bfm(lags, n, k, *, p=PRIME, backend='flint', product='classical'):
+def prepare_bfm(lags, n, k, *, p=PRIME, backend='flint', product='classical', strassen_leaf=16):
     """Prepare BFM boundary-front merge; product is classical or Strassen."""
     from ._internal.boundary_front.api import prepare_bfm as prepare
     from ._internal.boundary_front.fields import PrimeNative
     rows = _validate(lags,n,k)
     with _kernels(backend):
         state = prepare(PrimeNative(p),rows,n,dense_backend=product,
-                        strassen_leaf=16 if product=='strassen' else 1,residual_check='classical')
+                        strassen_leaf=strassen_leaf if product=='strassen' else 1,residual_check='classical')
     return PreparedSolver(state,'BFM' if product=='classical' else 'BFM-Strassen',backend)
 
 
@@ -275,3 +275,21 @@ def prepare_dense_lu(lags,n,width,*,kind='banded',p=PRIME):
                           determinant=state.determinant,cleanup=state.close,
                           forward_many=state.solve,
                           transpose_many=lambda bs:state.solve(bs,transpose=True))
+
+
+def solve_dedicated(lags,n,k,forward_rhs,transpose_rhs,*,p=PRIME,
+                    backend='flint',product='strassen',strassen_leaf=8):
+    """Dedicated banded proof-of-concept, including the Strassen route.
+
+    Pays the complete construction for one forward/transpose pair. This is
+    the bounded comparison from the exponent discussion, not an executable
+    realization of the general fast-exponent theorem. The statistics include
+    the explicit dense-kernel ledger.
+    """
+    from ._internal.dedicated_banded_arithmetic import solve_dedicated_banded
+    from ._internal.halfstrip_core.exact import PrimeField
+    rows=_validate(lags,n,k)
+    raw={(a,b):rows[a+k][b+n-1] for a in range(-k,k+1) for b in range(1-n,n)}
+    with _kernels(backend):
+        return solve_dedicated_banded(PrimeField(p),n,k,raw,list(forward_rhs),list(transpose_rhs),
+            dense_backend=product,strassen_leaf=strassen_leaf if product=='strassen' else 1)

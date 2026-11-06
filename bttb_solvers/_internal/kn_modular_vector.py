@@ -1,5 +1,15 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""KN supplied-generator algebra.
+
+Role: Trial/shared. Solve a polynomial-matrix/vector problem modulo a supplied polynomial or z**n-c for carrier and projection operations.
+
+Entry points: ModularVector.solve_mod.
+
+References: Khichane and Neiger (2026); see REFERENCES.md for the precise
+approximant/kernel sources and preprint scope.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.kn_services import Services
 from bttb_solvers._internal.kn_polynomial import count
 from bttb_solvers._internal.fast_scalar import FastScalar

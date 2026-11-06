@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Trial/shared. Uniform/CK inverse-series and approximant-terminal comparison; a separate route from public HSC and HIR.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from time import perf_counter
 
 from .jacobi_solver import JacobiHalfStripSolver

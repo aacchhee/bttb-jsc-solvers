@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Search and certify grouped/cyclic chart data consumed by narrow front-end acquisition.
+
+Entry points: prepare_grouped_chart; select_cyclic_chart.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.polynomial import ProductTree, trim
 from bttb_solvers._internal.fast_scalar import FastScalar
 from bttb_solvers._internal.label_algebra import setup_banded_label_algebra

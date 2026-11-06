@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Field setup and common representation tools.
+
+Role: Shared. Exact constant-matrix row/rank-profile selection and kernel data; used by structured acquisition code.
+
+Entry points: rank_profile_kernel; row_rank_profile.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import gauss_jordan, matrix_product, _inverse
 
 

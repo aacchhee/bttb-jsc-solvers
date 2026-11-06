@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial. Acquire wide-band Stein generators, optionally compress them, and solve the resulting physical service through supplied-generator algebra.
+
+Entry points: WidePhysicalSolver; solve_wide.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.dense_backend import metadata as dense_metadata, terminal_method, affinity
 from bttb_solvers._internal.kn_services import Services, METHOD
 from bttb_solvers._internal.wide_raw_generator import acquire

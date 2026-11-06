@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Shared. Select the uniform or Cantor-Kaltofen scalar multiplier for inverse-series and terminal controls.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from copy import deepcopy
 
 from .allfield_poly import make_multiplier, multiply_rectangles, LEAF_CUTOFF

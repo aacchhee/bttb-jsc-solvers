@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Field setup and common representation tools.
+
+Role: Shared. Fast scalar-polynomial arithmetic used by label acquisition and physical front ends; reports nonunits to the owning restart loop.
+
+Entry points: FastScalar; PolynomialNonUnit.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.polynomial import PolynomialArithmetic, trim
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import make_multiplier
 

@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured CC comparison.
+
+Role: Trial. Compose the structured supplied-root carrier, projected correction and terminal into a one-pair comparison, with an optional prepared classical inner base.
+
+Entry points: solve_hb; prepare_hb.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.dense_backend import metadata as dense_metadata, terminal_method, selection
 from bttb_solvers._internal.hb_frontend import prepare_hb_frontend
 from bttb_solvers._internal.weighted_carrier import acquire_weighted_carrier
@@ -10,14 +18,14 @@ from bttb_solvers._internal.wide_physical_solver import SingularPhysicalMatrix
 from bttb_solvers._internal.hb_prepared_dense import HBPreparedDense
 
 
-METHOD = 'HB1150_SUPPLIED_ROOT_MU_TRUE_TRANSPOSE_STRASSEN'
+METHOD = 'STRUCTURED_CC_SUPPLIED_ROOT_MU_TRUE_TRANSPOSE_STRASSEN'
 
 
 def _method():
     backend,leaf=selection()
     if (backend,leaf)==('strassen',1):return METHOD
-    if backend=='classical':return 'HB1150_SUPPLIED_ROOT_MU_TRUE_TRANSPOSE_CLASSICAL_DENSE'
-    return 'HB1150_SUPPLIED_ROOT_MU_TRUE_TRANSPOSE_STRASSEN_FIXED_LEAF_'+str(leaf)
+    if backend=='classical':return 'STRUCTURED_CC_SUPPLIED_ROOT_MU_TRUE_TRANSPOSE_CLASSICAL_DENSE'
+    return 'STRUCTURED_CC_SUPPLIED_ROOT_MU_TRUE_TRANSPOSE_STRASSEN_FIXED_LEAF_'+str(leaf)
 
 
 def _scale(F, vector, n, mu, inverse=False):
@@ -184,7 +192,7 @@ def prepare_hb(F, n, k, raw, omega, *, arm='current'):
     terminal = Services(field,stats['terminal'])
     if arm != 'current':
         terminal = HBPreparedDense(field,correction.G0,correction.H0,stats['terminal'])
-        metadata['method'] = 'HB1150_CLASSICAL_PREPARED_INNER_'+arm.upper()
+        metadata['method'] = 'Structured-CC'
         metadata['terminal_method'] = 'HB_CLASSICAL_PREPARED_PLU'
     metadata.update(mu=prepared['mu'],selected_coset=prepared['search']['selected_coset'],
                     repair_rank=projected.s,represented_order=correction.order,

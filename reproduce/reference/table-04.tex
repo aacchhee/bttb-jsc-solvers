@@ -1,0 +1,53 @@
+\begin{table}[p]
+\caption{CC-R and CC at $n=128$, solve-only: CPU seconds, CC-R memory
+(GiB), dense CPU and CC-R speedups for both references.  Host $h$: recorded host $h$
+of the first measurement series, which gives the CC-R, CC, memory and
+separate-elimination columns.  The one-LU columns come from the one-LU
+measurement series, which reassigned hosts: host B for $k=2,4,8$ and host C for $k=1$
+and $k\ge16$.  Absolute times are compared only within a host and measurement series.
+CC was not scheduled for $k\ge16$.}
+
+
+
+\centering\small
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}{@{}rrc|rrr|rr|rr@{}}
+\hline
+& & & & & & \multicolumn{2}{c|}{dense CPU} & \multicolumn{2}{c}{CC-R speedup} \\
+$k$ & $R$ & $h$ & CC-R & CC & CC-R GiB & sep. & LU & sep. & LU \\
+\hline
+
+$1$ & $1$ & 0 & \papernum{cc.n128.k1.r1.cc_r.cpu} & \papernum{cc.n128.k1.r1.cc.cpu} & \papernum{cc.n128.k1.r1.cc_r.mem} & \papernum{cc.n128.k1.r1.dense.solve_cpu} & \papernum{cc.n128.k1.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k1.r1.cc_r.speedup_dense} & \papernum{cc.n128.k1.r1.cc_r.speedup_dense_lu} \\
+
+$1$ & $2$ & 0 & \papernum{cc.n128.k1.r2.cc_r.cpu} & \papernum{cc.n128.k1.r2.cc.cpu} & \papernum{cc.n128.k1.r2.cc_r.mem} & \papernum{cc.n128.k1.r2.dense.solve_cpu} & \papernum{cc.n128.k1.r2.dense.lu_solve_cpu} & \papernum{cc.n128.k1.r2.cc_r.speedup_dense} & \papernum{cc.n128.k1.r2.cc_r.speedup_dense_lu} \\
+
+$2$ & $1$ & 1 & \papernum{cc.n128.k2.r1.cc_r.cpu} & \papernum{cc.n128.k2.r1.cc.cpu} & \papernum{cc.n128.k2.r1.cc_r.mem} & \papernum{cc.n128.k2.r1.dense.solve_cpu} & \papernum{cc.n128.k2.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k2.r1.cc_r.speedup_dense} & \papernum{cc.n128.k2.r1.cc_r.speedup_dense_lu} \\
+
+$2$ & $4$ & 1 & \papernum{cc.n128.k2.r4.cc_r.cpu} & \papernum{cc.n128.k2.r4.cc.cpu} & \papernum{cc.n128.k2.r4.cc_r.mem} & \papernum{cc.n128.k2.r4.dense.solve_cpu} & \papernum{cc.n128.k2.r4.dense.lu_solve_cpu} & \papernum{cc.n128.k2.r4.cc_r.speedup_dense} & \papernum{cc.n128.k2.r4.cc_r.speedup_dense_lu} \\
+
+$4$ & $1$ & 1 & \papernum{cc.n128.k4.r1.cc_r.cpu} & \papernum{cc.n128.k4.r1.cc.cpu} & \papernum{cc.n128.k4.r1.cc_r.mem} & \papernum{cc.n128.k4.r1.dense.solve_cpu} & \papernum{cc.n128.k4.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k4.r1.cc_r.speedup_dense} & \papernum{cc.n128.k4.r1.cc_r.speedup_dense_lu} \\
+
+$4$ & $4$ & 1 & \papernum{cc.n128.k4.r4.cc_r.cpu} & \papernum{cc.n128.k4.r4.cc.cpu} & \papernum{cc.n128.k4.r4.cc_r.mem} & \papernum{cc.n128.k4.r4.dense.solve_cpu} & \papernum{cc.n128.k4.r4.dense.lu_solve_cpu} & \papernum{cc.n128.k4.r4.cc_r.speedup_dense} & \papernum{cc.n128.k4.r4.cc_r.speedup_dense_lu} \\
+
+$8$ & $1$ & 1 & \papernum{cc.n128.k8.r1.cc_r.cpu} & \papernum{cc.n128.k8.r1.cc.cpu} & \papernum{cc.n128.k8.r1.cc_r.mem} & \papernum{cc.n128.k8.r1.dense.solve_cpu} & \papernum{cc.n128.k8.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k8.r1.cc_r.speedup_dense} & \papernum{cc.n128.k8.r1.cc_r.speedup_dense_lu} \\
+
+$8$ & $4$ & 1 & \papernum{cc.n128.k8.r4.cc_r.cpu} & \papernum{cc.n128.k8.r4.cc.cpu} & \papernum{cc.n128.k8.r4.cc_r.mem} & \papernum{cc.n128.k8.r4.dense.solve_cpu} & \papernum{cc.n128.k8.r4.dense.lu_solve_cpu} & \papernum{cc.n128.k8.r4.cc_r.speedup_dense} & \papernum{cc.n128.k8.r4.cc_r.speedup_dense_lu} \\
+
+$16$ & $1$ & 2 & \papernum{cc.n128.k16.r1.cc_r.cpu} & --- & \papernum{cc.n128.k16.r1.cc_r.mem} & \papernum{cc.n128.k16.r1.dense.solve_cpu} & \papernum{cc.n128.k16.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k16.r1.cc_r.speedup_dense} & \papernum{cc.n128.k16.r1.cc_r.speedup_dense_lu} \\
+
+$16$ & $4$ & 2 & \papernum{cc.n128.k16.r4.cc_r.cpu} & --- & \papernum{cc.n128.k16.r4.cc_r.mem} & \papernum{cc.n128.k16.r4.dense.solve_cpu} & \papernum{cc.n128.k16.r4.dense.lu_solve_cpu} & \papernum{cc.n128.k16.r4.cc_r.speedup_dense} & \papernum{cc.n128.k16.r4.cc_r.speedup_dense_lu} \\
+
+$32$ & $1$ & 2 & \papernum{cc.n128.k32.r1.cc_r.cpu} & --- & \papernum{cc.n128.k32.r1.cc_r.mem} & \papernum{cc.n128.k32.r1.dense.solve_cpu} & \papernum{cc.n128.k32.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k32.r1.cc_r.speedup_dense} & \papernum{cc.n128.k32.r1.cc_r.speedup_dense_lu} \\
+
+$32$ & $4$ & 2 & \papernum{cc.n128.k32.r4.cc_r.cpu} & --- & \papernum{cc.n128.k32.r4.cc_r.mem} & \papernum{cc.n128.k32.r4.dense.solve_cpu} & \papernum{cc.n128.k32.r4.dense.lu_solve_cpu} & \papernum{cc.n128.k32.r4.cc_r.speedup_dense} & \papernum{cc.n128.k32.r4.cc_r.speedup_dense_lu} \\
+
+$48$ & $1$ & 2 & \papernum{cc.n128.k48.r1.cc_r.cpu} & --- & \papernum{cc.n128.k48.r1.cc_r.mem} & \papernum{cc.n128.k48.r1.dense.solve_cpu} & \papernum{cc.n128.k48.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k48.r1.cc_r.speedup_dense} & \papernum{cc.n128.k48.r1.cc_r.speedup_dense_lu} \\
+
+$48$ & $4$ & 2 & \papernum{cc.n128.k48.r4.cc_r.cpu} & --- & \papernum{cc.n128.k48.r4.cc_r.mem} & \papernum{cc.n128.k48.r4.dense.solve_cpu} & \papernum{cc.n128.k48.r4.dense.lu_solve_cpu} & \papernum{cc.n128.k48.r4.cc_r.speedup_dense} & \papernum{cc.n128.k48.r4.cc_r.speedup_dense_lu} \\
+
+$63$ & $1$ & 2 & \papernum{cc.n128.k63.r1.cc_r.cpu} & --- & \papernum{cc.n128.k63.r1.cc_r.mem} & \papernum{cc.n128.k63.r1.dense.solve_cpu} & \papernum{cc.n128.k63.r1.dense.lu_solve_cpu} & \papernum{cc.n128.k63.r1.cc_r.speedup_dense} & \papernum{cc.n128.k63.r1.cc_r.speedup_dense_lu} \\
+
+$63$ & $4$ & 2 & \papernum{cc.n128.k63.r4.cc_r.cpu} & --- & \papernum{cc.n128.k63.r4.cc_r.mem} & \papernum{cc.n128.k63.r4.dense.solve_cpu} & \papernum{cc.n128.k63.r4.dense.lu_solve_cpu} & \papernum{cc.n128.k63.r4.cc_r.speedup_dense} & \papernum{cc.n128.k63.r4.cc_r.speedup_dense_lu} \\
+\hline
+\end{tabular}}
+\end{table}

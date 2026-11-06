@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""HIR, shared multiplication and alternate terminal components.
+
+Role: Shared. HIR response preparation, terminal construction, determinant and prepared physical solves.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .errors import (HalfStripError, SingularLeadingBlock, SingularTerminalMatrix,
                      NotPrepared, NoNTTRoot, WidthOutOfRange)
 from .leading import LeadingInverse

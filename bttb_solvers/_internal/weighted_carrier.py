@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Retain weighted carrier actions over the acquired chart; used before projected correction generators are constructed.
+
+Entry points: WeightedRingCarrier; acquire_weighted_carrier.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core import uniform_terminal as uniform
 from bttb_solvers._internal.kn_modular_vector import ModularVector
 

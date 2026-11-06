@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial/shared. Raw Toeplitz coefficient and spatial-convolution access for explicit source acquisition. The public HSC-q0 precision adapter lives in hsc_solver.py.
+
+Entry points: SpatialConvolution; RawToeplitzLags.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.fast_linear import inverse_and_determinant
 from bttb_solvers._internal.halfstrip_core.dense_backend import metadata
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import make_multiplier, matrix_product

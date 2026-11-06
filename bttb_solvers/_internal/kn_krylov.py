@@ -1,5 +1,15 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""KN supplied-generator algebra.
+
+Role: Trial/shared. Small-order canonical approximant leaf based on exact nilpotent/striped Krylov actions and row-rank profiles.
+
+Entry points: canonical_leaf; row_rank_profile.
+
+References: Khichane and Neiger (2026); see REFERENCES.md for the precise
+approximant/kernel sources and preprint scope.
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core import uniform_terminal as uniform
 from bttb_solvers._internal.kn_polynomial import count
 

@@ -1,0 +1,20 @@
+\begin{table}[p]
+\centering
+\small
+\begin{tabular}{@{}lll@{}}
+\hline
+Steps & Work & Field operations \\
+\hline
+\texttt{S5} & powers, frequency lag vectors & $O(kmn)$\\
+\texttt{S2}, \texttt{S4} & determinant polynomial, coset search & $L_\mu$\\
+\texttt{S3} & normal rank, nullspaces, nodes ($s>0$) & $O(kn^3+k^2n^2)$\\
+\texttt{S6} & $m$ frequency inverses, streamed & $O(mn^2)$\\
+\texttt{S6} & needed $G_t$ blocks; projections ($s>0$) & $O(kmn^2)$; $O(kn^3+kmn^2)$\\
+\texttt{S7} & form and factor $\mathcal M$ & $O(k^3n^3)$\\
+query & two carriers and correction, direct transforms & $O(mn^2+nm^2+(kn)^2)$\\
+\hline
+\end{tabular}
+\caption{CC setup and query costs with the field representation and
+$\zeta$ supplied; correction-size terms use (HB4).}
+
+\end{table}

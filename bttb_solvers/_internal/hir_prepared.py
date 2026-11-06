@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main HIR construction.
+
+Role: Main. Configure the HIR leading-block recurrence, response layout and terminal solver; the public wrapper selects n impulses and a dense terminal.
+
+Entry points: prepare_hir; solve_hir.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 import time
 from bttb_solvers._internal.banded_bttb.field import PrimeField
 from bttb_solvers._internal.halfstrip.counter import HalfStripCounter

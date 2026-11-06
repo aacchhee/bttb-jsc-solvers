@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Field setup and common representation tools.
+
+Role: Shared. Adapt explicit coordinate fields to the guarded native-operation interface used by source/generator acquisition.
+
+Entry points: NativeBaseFieldView.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import _FieldOperations
 
 

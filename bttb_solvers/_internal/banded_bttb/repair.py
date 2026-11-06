@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""CC Toeplitz, symbol and correction primitives.
+
+Role: Shared. Normal-rank tests and low-rank Toeplitz symbol repair for CC.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .errors import RepairFailed, FieldTooSmall
 from .field import ordered_elements
 from .symbol import symbol_lag_at, eval_points

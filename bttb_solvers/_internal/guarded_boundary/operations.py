@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""GBE boundary comparator.
+
+Role: Main/shared. Width-one repeated-block boundary preparation and query recurrence.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from .boundary import Prepared, RankFailure, zeros, endpoints, matvec, transpose
 
 

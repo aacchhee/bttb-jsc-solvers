@@ -1,5 +1,11 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""BFM local-front implementation.
+
+Role: Main/shared. Native eight-operation fields and adapters, including LeanAttrField for the GBE comparator.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 class PrimeNative:
     def __init__(self, p):
         if type(p) is not int or p < 2:

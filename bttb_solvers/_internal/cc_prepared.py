@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Main CC setup and queries.
+
+Role: Main. Construct the repaired block-circulant/Woodbury preparation; query it directly or with retained four-vector Toeplitz inverse factors.
+
+Entry points: CirculantCorrectionPrepared; ToeplitzInverseFactors.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.banded_bttb.symbol import BandedSymbol, det_symbol_poly, find_mu
 from bttb_solvers._internal.banded_bttb import repair
 from bttb_solvers._internal.banded_bttb.circulant import frequency_symbol_lags, accumulate_G, corners, apply_C_inv, _dft, transform_route
@@ -79,7 +87,7 @@ class CirculantCorrectionPrepared:
         self.symbol_factors=None
         if arm=='retained':
             self.symbol_factors=[ToeplitzInverseFactors(F,lag,n) for lag in self.frequency_lags]
-        self.metadata={'method':'CC_'+arm.upper(),'hb_arm':arm,
+        self.metadata={'method':('CC-R' if arm=='retained' else 'CC'),'hb_arm':arm,
             'fully_kn_free':True,'supplied_root':True,'field_construction':False,
             'inner_preparations':1,'physical_order':n*n,'repair_rank':s,
             'represented_order':self.corr.r,'query_transform':self.apply_route,

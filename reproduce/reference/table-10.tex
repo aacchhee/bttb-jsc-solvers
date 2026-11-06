@@ -1,0 +1,21 @@
+\begin{table}[p]
+\caption{Control cells $(n,k,R)$, one forward and one literal transpose
+solve per pair ($R=1$): solve-only CPU seconds, compiled FLINT kernels.
+MEASURED on finite fixtures; no exponent is inferred.}
+
+\centering
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\hline
+& \multicolumn{2}{c}{Prop.~4.1} & Dedicated & \multicolumn{2}{c}{Dense} \\
+$(n,k,R)$ & classical & Strassen & Strassen & solve & LU \\
+\hline
+
+$(16,2,1)$ & \papernum{poc.n16.k2.r1.bfm.cpu} & \papernum{poc.n16.k2.r1.strassen.cpu} & \papernum{poc.n16.k2.r1.dedicated_strassen.cpu} & \papernum{poc.n16.k2.r1.dense.solve_cpu} & \papernum{poc.n16.k2.r1.dense.lu_solve_cpu} \\
+
+$(32,2,1)$ & \papernum{poc.n32.k2.r1.bfm.cpu} & \papernum{poc.n32.k2.r1.strassen.cpu} & \papernum{poc.n32.k2.r1.dedicated_strassen.cpu} & \papernum{poc.n32.k2.r1.dense.solve_cpu} & \papernum{poc.n32.k2.r1.dense.lu_solve_cpu} \\
+
+$(64,1,1)$ & \papernum{poc.n64.k1.r1.bfm.cpu} & \papernum{poc.n64.k1.r1.strassen.cpu} & \papernum{poc.n64.k1.r1.dedicated_strassen.cpu} & \papernum{poc.n64.k1.r1.dense.solve_cpu} & \papernum{poc.n64.k1.r1.dense.lu_solve_cpu} \\
+\hline
+\end{tabular}
+\end{table}

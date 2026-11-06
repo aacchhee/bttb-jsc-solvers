@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Represent mixed upper/lower boundary crosses and physical displacement actions without an unconditional physical dense matrix.
+
+Entry points: MixedUpperCross; MixedLowerCross; PhysicalDisplacement.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.rectangular_cauchy import RectangularCauchy, _ids
 from bttb_solvers._internal.spatial_transforms import SpatialTransform, correlation, row_product
 

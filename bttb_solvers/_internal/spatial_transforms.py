@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Displacement construction trials.
+
+Role: Trial/shared. Spatial evaluation/correlation transforms used to move between raw Toeplitz data and carrier/generator coordinates.
+
+Entry points: SpatialTransform; row_product; correlation.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip.allfield_poly import multiply_rectangles
 from bttb_solvers._internal.cauchy_transforms import CauchyCatalog
 

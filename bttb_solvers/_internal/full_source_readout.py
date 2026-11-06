@@ -1,5 +1,13 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
+"""Structured half-strip comparison.
+
+Role: Trial. Read source coefficients, form the terminal problem and recover a physical solution in the structured half-strip comparison.
+
+Entry points: FullSource; solve_prepared.
+
+Navigation: docs/CODE_GUIDE.md and docs/SOLVERS.md (repository root).
+"""
 from bttb_solvers._internal.halfstrip_core.uniform_terminal import matrix_product
 from bttb_solvers._internal.halfstrip_core.mosaic import run_mosaic, solve_mosaic
 from bttb_solvers._internal.halfstrip_core.exact import power
