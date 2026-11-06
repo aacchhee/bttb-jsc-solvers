@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Construction controls: slowdown relative to the matching dense
+LU service, including preparation. Here ratios are route CPU divided by
+dense CPU.}
+\label{exponent-tab-poc}
+\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\hline
+Construction & Cases & Slowdown range & Median \\
+\hline
+Structured half-strip & \papernum{poc.structured_halfstrip.cells} & \papernum{poc.structured_halfstrip.slowdown_dense_lu.min}--\papernum{poc.structured_halfstrip.slowdown_dense_lu.max} & \papernum{poc.structured_halfstrip.slowdown_dense_lu.median} \\
+Dedicated banded, classical & \papernum{poc.dedicated_classical.cells} & \papernum{poc.dedicated_classical.slowdown_dense_lu.min}--\papernum{poc.dedicated_classical.slowdown_dense_lu.max} & \papernum{poc.dedicated_classical.slowdown_dense_lu.median} \\
+Structured CC & \papernum{poc.structured_cc.cells} & \papernum{poc.structured_cc.slowdown_dense_lu.min}--\papernum{poc.structured_cc.slowdown_dense_lu.max} & \papernum{poc.structured_cc.slowdown_dense_lu.median} \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (C) 2026 Andrey Chesnokov
-"""Render recorded article tables, or display the summary of a fresh run."""
+"""Render extended recorded tables, or display the summary of a fresh run."""
 import argparse
 import csv
 import json
@@ -32,7 +32,7 @@ def reference_tables(destination):
     (destination/'recorded_tables.tex').write_text(header+'\n\\clearpage\n'.join(fragments)+'\n\\clearpage\n\\end{document}\n')
     with (destination/'paper_numbers.csv').open('w',newline='') as f:
         w=csv.DictWriter(f,fieldnames=['key','value','unit','kind']);w.writeheader();w.writerows(records)
-    print(f'Rendered {len(fragments)} article tables and {len(values)} printed keys in {destination}.')
+    print(f'Rendered {len(fragments)} extended tables and {len(values)} recorded keys in {destination}.')
     print('These are the recorded paper values, not new timing measurements.')
     return values
 

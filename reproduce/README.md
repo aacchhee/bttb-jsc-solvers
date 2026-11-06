@@ -1,4 +1,4 @@
-# Reproduce the paper's experiments and tables
+# Reproduce the paper's experiments and figures
 
 Run from the repository root after `python -m pip install -e .`.
 
@@ -84,7 +84,7 @@ as identical to the recorded paper values.
 - `BFM-Strassen`: boundary-front merge with explicit recursive Strassen products,
   leaf size 16, for both reference Python and compiled FLINT kernels.
 - `Dedicated-Strassen`: the dedicated one-pair construction with Strassen
-  products, leaf size 8, as in the paper's control table.
+  products, leaf size 8, for the dedicated-construction comparison.
 - `Dedicated-classical`, `Structured-halfstrip` and `Structured-CC` are the
   other bounded construction controls from the exponent discussion.
 - `Uniform-halfstrip` and the `CK-...` variants retain the scalar multiplication
@@ -98,14 +98,31 @@ recursive-node counts. FLINT's own internal product selection is not controlled
 or inferred from timings. The tests check that recursion actually occurs in both
 Strassen constructions and that their answers satisfy exact residuals.
 
-## Recorded paper tables
+## Recorded figures
+
+The three figures in Section 5 can be drawn without running the solvers:
+
+```bash
+python -m pip install matplotlib
+python reproduce/plots.py
+```
+
+This writes PDF and SVG figures in `reproduce/output/plots/`, together with
+`plot_points.json`, which identifies the recorded value behind each point.
+The figures show the bandwidth crossing, large-order scaling, and half-strip
+comparisons. Lines join observations; they are not fitted performance models.
+Matplotlib is optional and is needed only for drawing figures.
+
+## Extended numerical tables
 
 ```bash
 python reproduce/tables.py --reference
 ```
 
-This reconstructs all ten article tables from the supplied templates and the
-565 printed values in `reference/paper_numbers.csv`. It writes each table's TeX,
+This formats thirteen tables (ten extended comparisons and three compact
+experimental tables used in the current article) from the supplied templates and the
+recorded values in `reference/paper_numbers.csv`. The article presents a shorter
+selection of these comparisons, together with the figures above. It writes each table's TeX,
 `recorded_tables.tex` (a standalone compilable document) and the value CSV to
 `reproduce/output/tables/`. The value records retain `measured` versus `derived`
 labels; their keys use the paper's algorithm names. Some values are descriptive

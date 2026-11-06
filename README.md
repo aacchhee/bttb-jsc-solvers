@@ -71,12 +71,14 @@ Dedicated-Strassen is `solve_dedicated(..., product="strassen", strassen_leaf=8)
 Both contain explicit recursion, with inspectable ledgers; see
 [examples](examples/README.md#explore-neighbouring-approaches).
 
-## Regenerate measurements and tables
+## Regenerate measurements, figures and tables
 
 ```bash
 python reproduce/run.py --small       # exactly the three smallest cases
 python reproduce/run.py --large       # all cases; intentionally expensive
 python reproduce/tables.py --reference
+# Optional figures: install matplotlib first
+python reproduce/plots.py
 ```
 
 The [reproduction guide](reproduce/README.md) explains the fixed inputs,

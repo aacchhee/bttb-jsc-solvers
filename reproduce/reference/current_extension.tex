@@ -1,0 +1,19 @@
+\begin{table}
+\caption{Fastest compiled structured route in each extension-field test.
+Parentheses give speedup over the matching reusable dense LU.
+The column headers show block order $n$ and extension degree $d$.}
+\label{experiments-tab-ext}
+\centering\small
+\begin{tabular}{@{}rrlll@{}}
+\hline
+$k$ & $R$ & $n=96$, $d=2$ & $n=160$, $d=4$ & $n=192$, $d=2$ \\
+\hline
+$1$ & $1$ & BFM (\papernum{ext.n96.k1.r1.bfm.speedup_dense_lu}) & BFM (\papernum{ext.n160.k1.r1.bfm.speedup_dense_lu}) & BFM (\papernum{ext.n192.k1.r1.bfm.speedup_dense_lu}) \\
+$1$ & $4$ & BFM (\papernum{ext.n96.k1.r4.bfm.speedup_dense_lu}) & BFM (\papernum{ext.n160.k1.r4.bfm.speedup_dense_lu}) & BFM (\papernum{ext.n192.k1.r4.bfm.speedup_dense_lu}) \\
+$2$ & $1$ & BFM (\papernum{ext.n96.k2.r1.bfm.speedup_dense_lu}) & BFM (\papernum{ext.n160.k2.r1.bfm.speedup_dense_lu}) & BFM (\papernum{ext.n192.k2.r1.bfm.speedup_dense_lu}) \\
+$2$ & $4$ & CC-E-R (\papernum{ext.n96.k2.r4.cc_e_r.speedup_dense_lu}) & HIR (\papernum{ext.n160.k2.r4.hir.speedup_dense_lu}) & CC-E-R (\papernum{ext.n192.k2.r4.cc_e_r.speedup_dense_lu}) \\
+$4$ & $1$ & CC-E (\papernum{ext.n96.k4.r1.cc_e.speedup_dense_lu}) & HIR (\papernum{ext.n160.k4.r1.hir.speedup_dense_lu}) & CC-E-R (\papernum{ext.n192.k4.r1.cc_e_r.speedup_dense_lu}) \\
+$4$ & $4$ & CC-E-R (\papernum{ext.n96.k4.r4.cc_e_r.speedup_dense_lu}) & HIR (\papernum{ext.n160.k4.r4.hir.speedup_dense_lu}) & CC-E-R (\papernum{ext.n192.k4.r4.cc_e_r.speedup_dense_lu}) \\
+\hline
+\end{tabular}
+\end{table}

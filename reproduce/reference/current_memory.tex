@@ -1,0 +1,17 @@
+\begin{table}
+\caption{Matched peak process memory (GiB), $R=1$. Width means $k$ for
+CC-R and $w$ for the half-strip methods.}
+\label{experiments-tab-memory}
+\centering\small
+\begin{tabular}{@{}lrrrr@{}}
+\hline
+Method & $n$ & width & Structured & Dense LU \\
+\hline
+CC-R & $128$ & $1$ & \papernum{memory.cc_r.n128.w1.r1.structured} & \papernum{memory.cc_r.n128.w1.r1.dense} \\
+CC-R & $224$ & $1$ & \papernum{memory.cc_r.n224.w1.r1.structured} & \papernum{memory.cc_r.n224.w1.r1.dense} \\
+CC-R & $256$ & $1$ & \papernum{memory.cc_r.n256.w1.r1.structured} & \papernum{memory.cc_r.n256.w1.r1.dense} \\
+HIR & $192$ & $2$ & \papernum{memory.hir.n192.w2.r1.structured} & \papernum{memory.hir.n192.w2.r1.dense} \\
+HPR & $192$ & $2$ & \papernum{memory.hpr.n192.w2.r1.structured} & \papernum{memory.hpr.n192.w2.r1.dense} \\
+\hline
+\end{tabular}
+\end{table}
