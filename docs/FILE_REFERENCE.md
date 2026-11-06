@@ -6,10 +6,12 @@ overview of how the mathematics is divided among the files, first read
 
 ## Complete module index
 
-Roles: **Main** is a main solver implementation; **Shared** is an algebra/representation
-component; **Trial** is a retained comparison or alternate construction. **Mixed** files
-also expose helpers used by main routes. The role is about this package, not a proof status.
-Empty package `__init__.py` files provide namespaces only.
+The tables distinguish the main solvers (**Main**), calculations used by several
+methods (**Shared**), and alternative constructions kept for comparison
+(**Trial**). Some trial files also supply calculations used by the main solvers
+and are marked **Mixed**. These labels describe how the code is used; the solver
+guide states the mathematical assumptions and limitations.
+The empty `__init__.py` files only organize Python imports.
 
 ### Main CC setup and queries
 
@@ -192,4 +194,3 @@ Empty package `__init__.py` files provide namespaces only.
 | [halfstrip_core/reuse.py](../bttb_solvers/_internal/halfstrip_core/reuse.py) | Main/shared | HPR preparation, restart ownership and LU/division/appended queries; also HSC oneshot_solve and deterministic fixture helpers. |
 | [halfstrip_core/solver.py](../bttb_solvers/_internal/halfstrip_core/solver.py) | Main/shared | Main HSC carrier-to-terminal orchestration, determinant scaling, physical reconstruction and working-algebra descent. |
 | [halfstrip_core/uniform_terminal.py](../bttb_solvers/_internal/halfstrip_core/uniform_terminal.py) | Shared | Constant/polynomial matrix multiplication, explicit Strassen recursion, elimination leaves and recursive PM-Basis primitives. |
-
